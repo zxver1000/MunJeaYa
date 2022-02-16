@@ -7,12 +7,19 @@ const Logins = () =>{
 
     return (
         <div class="wrap">
+             <div>
+      
+    </div>
 <div class="login">
-    <h2>MunJeaYa</h2>
+    <div>
+<img src="./pom.PNG" alt="" />
+</div>
+    <h3>MunJeaYa</h3>
     <div class="login_sns">
-    <li><a href=""><i class="fab fa-instagram"></i></a></li>
-    <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+    <li><a href="" style={{background:'khaki'}}></a></li>
+    <li><a href="" style={{background:'orange'}}></a></li>
+    <li><a href="" style={{background:'skyblue'}}></a></li>
+    
     </div>
     <div class="login_id">
         <h4>ID</h4>
@@ -26,10 +33,11 @@ const Logins = () =>{
         <div class="checkbox">
       
         </div>
-        <div class="forgot_pw">
+        <a href="">Find ID </a>
+        <div class="log_btn">
             
-        <a href="">Forgot Password?        </a>
-        <Link to="/about">
+        
+        <Link to="/main">
         <Button variant="primary">Login</Button>
         </Link>
     </div>

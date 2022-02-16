@@ -14,16 +14,16 @@
 }
 
 .background {
-  width: 100%;
-  height: 100px;
-}
-
-.backbox {
-  width: 100%;
-  height: 1000px;
-  background-color: grey;
-  background-image: url("background.jpg");
+  background-image: url("test1.jpg");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.row {
+  margin-top: 20px;
+}
+.col {
+  margin-top: 50px;
 }
 
 .App-header {
@@ -69,13 +69,14 @@ li {
 button {
   border-radius: 50%;
 }
+
 .wrap {
   width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.1);
+  background: grey;
 }
 
 .login {
@@ -94,7 +95,7 @@ h2 {
   font-size: 2em;
 }
 .login_sns {
-  padding: 20px;
+  padding: 30px;
   display: flex;
 }
 
@@ -116,8 +117,8 @@ h2 {
 }
 
 .login_id {
-  margin-top: 20px;
-  width: 80%;
+  margin-top: 15px;
+  width: 75%;
 }
 
 .login_id input {
@@ -159,6 +160,7 @@ h2 {
   margin-top: 50px;
   width: 80%;
 }
+
 .submit input {
   width: 100%;
   height: 50px;
