@@ -14,7 +14,7 @@
 }
 
 .background {
-  background-image: url("test1.jpg");
+  background-image: url("../assets/test1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
