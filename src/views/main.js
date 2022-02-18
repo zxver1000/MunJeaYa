@@ -21,9 +21,9 @@ function icon_insert() {
 
   for (let i = 0; i < 12; i++) {
     array.push(
-      <div className="col">
+      <Col>
         <a href="" className="button"></a>
-      </div>
+      </Col>
     );
   }
 
@@ -80,7 +80,7 @@ const Main = () => {
       <Container className="background">
         <div className="garbage"></div>
       </Container>
-      <Container fluid>
+      <Container>
         <div className="row">{icon_insert()}</div>
       </Container>
     </div>
