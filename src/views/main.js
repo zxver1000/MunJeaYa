@@ -1,5 +1,6 @@
 import "../style/main.css";
 import React from "react";
+
 import {
   Navbar,
   Container,
@@ -10,7 +11,25 @@ import {
   NavDropdown,
   Form,
   FormControl,
+  Row,
+  Col,
 } from "react-bootstrap";
+import { isCursorAtEnd } from "@testing-library/user-event/dist/utils";
+
+function icon_insert() {
+  var array = [];
+
+  for (let i = 0; i < 12; i++) {
+    array.push(
+      <div className="col">
+        <a href="" className="button"></a>
+      </div>
+    );
+  }
+
+  return array;
+}
+
 const Main = () => {
   return (
     <div>
@@ -61,51 +80,9 @@ const Main = () => {
       <Container className="background">
         <div className="garbage"></div>
       </Container>
-
-      <div className="row">
-        <div className="col-md-3">
-          <a href="" className="button">
-            hihi
-          </a>
-        </div>
-        <div className="col-md-3">
-          <a href="" className="button">
-            hihi
-          </a>
-        </div>
-        <div className="col-md-3">
-          <a href="" className="button">
-            hihi
-          </a>
-        </div>
-        <div className="col-md-3">
-          <a href="" className="button">
-            hihi
-          </a>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-md-3">
-          <a href="" className="button">
-            hihi
-          </a>
-        </div>
-        <div className="col-md-3">
-          <a href="" className="button">
-            hihi
-          </a>
-        </div>
-        <div className="col-md-3">
-          <a href="" className="button">
-            hihi
-          </a>
-        </div>
-        <div className="col-md-3">
-          <a href="" className="button">
-            hihi
-          </a>
-        </div>
-      </div>
+      <Container fluid>
+        <div className="row">{icon_insert()}</div>
+      </Container>
     </div>
   );
 };
