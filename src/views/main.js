@@ -1,6 +1,7 @@
 import "../style/main.css";
-import React from "react";
-
+import React, { useEffect, useState } from "react";
+import image1 from "../assets/12_images.png";
+import icon12 from "../assets/main_icon12.png";
 import {
   Navbar,
   Container,
@@ -16,21 +17,39 @@ import {
 } from "react-bootstrap";
 import { isCursorAtEnd } from "@testing-library/user-event/dist/utils";
 
-function icon_insert() {
+function icon_insert(기본정보창상태변경) {
   var array = [];
-
+  var urls = "../assets/main_icon12.png";
+  var url2 =
+    "http://localhost:3000/react-flip/static/media/main_icon1.6d11817a5ef80923c88b.png";
   for (let i = 0; i < 12; i++) {
-    array.push(
-      <Col>
-        <a href="" className="button"></a>
-      </Col>
-    );
+    if (i == 11) {
+      array.push(
+        <Col>
+          <a
+            className="button main_icon12"
+            style={{ backgroundImage: `url({icon12})` }}
+            onClick={() => {
+              기본정보창상태변경(true);
+            }}
+          ></a>
+        </Col>
+      );
+    } else {
+      array.push(
+        <Col>
+          <a href="" className="button"></a>
+        </Col>
+      );
+    }
   }
 
   return array;
 }
 
 const Main = () => {
+  let [기본정보창상태, 기본정보창상태변경] = useState(false);
+
   return (
     <div>
       <Navbar bg="light" expand={false}>
@@ -80,8 +99,22 @@ const Main = () => {
       <Container className="background">
         <div className="garbage"></div>
       </Container>
+
+      {기본정보창상태 == true ? (
+        <Container>
+          <div
+            className="nomal_box"
+            onClick={() => {
+              기본정보창상태변경(false);
+            }}
+          >
+            <img src={image1} width="100%" />
+          </div>
+        </Container>
+      ) : null}
+
       <Container>
-        <div className="row">{icon_insert()}</div>
+        <div className="row">{icon_insert(기본정보창상태변경)}</div>
       </Container>
     </div>
   );

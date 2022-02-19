@@ -13,9 +13,31 @@ a.button {
   padding: 20px 30px;
   border: 1px solid;
 }
+
+.button12 {
+  background-image: url("../assets/main_icon12.png");
+  -webkit-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  -moz-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  -ms-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  -o-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  display: block;
+
+  width: 320px;
+  height: 142px;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 20px 30px;
+  border: 1px solid;
+}
+
 a.button button {
   color: rgba(30, 22, 54, 0.6);
   box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;
+}
+
+.main_icon12 {
+  background-image: url("../assets/main_icon12.png") !important  ;
 }
 
 a.button:hover {
@@ -34,4 +56,14 @@ a.button:hover {
 }
 .garbage {
   height: 500px;
+}
+
+/* 12번 기본정보화면 박스*/
+.nomal_box {
+  height: auto;
+  transition: all 1s;
+  z-index: 5;
+  position: absolute;
+  transform: translateY(-70vw);
+  transform: translateX(3vw);
 }
