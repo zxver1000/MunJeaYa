@@ -10,20 +10,13 @@ import About from "./views/about";
 import Contact from "./views/contact";
 import Login from "./views/login/login";
 import Logins from "./views/login/logins";
-
-function Ea() {
-  return (
-    <div>
-      <h3>hkhk</h3>
-    </div>
-  );
-}
+import StudentManage from "./views/StudentManage";
 
 function App() {
   return (
     <div>
       <Switch>
-        <Route exact path="/" component={Ea}>
+        <Route exact path="/">
           <Logins />
         </Route>
 
@@ -33,6 +26,10 @@ function App() {
 
         <Route exact path="/contact">
           <Login />
+        </Route>
+
+        <Route exact path="/StudentManage">
+          <StudentManage />
         </Route>
       </Switch>
     </div>

@@ -5,7 +5,6 @@ a.button {
   -o-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
   transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
   display: block;
-  background-image: url("../assets/main_icon1.png");
   width: 320px;
   height: 142px;
   text-decoration: none;
@@ -36,6 +35,39 @@ a.button button {
   box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;
 }
 
+.main_icon1 {
+  background-image: url("../assets/main_icon1.png") !important  ;
+}
+.main_icon2 {
+  background-image: url("../assets/main_icon2.png") !important  ;
+}
+.main_icon3 {
+  background-image: url("../assets/main_icon3.png") !important  ;
+}
+.main_icon4 {
+  background-image: url("../assets/main_icon4.png") !important  ;
+}
+.main_icon5 {
+  background-image: url("../assets/main_icon5.png") !important  ;
+}
+.main_icon6 {
+  background-image: url("../assets/main_icon6.png") !important  ;
+}
+.main_icon7 {
+  background-image: url("../assets/main_icon7.png") !important  ;
+}
+.main_icon8 {
+  background-image: url("../assets/main_icon8.png") !important  ;
+}
+.main_icon9 {
+  background-image: url("../assets/main_icon9.png") !important  ;
+}
+.main_icon10 {
+  background-image: url("../assets/main_icon10.png") !important  ;
+}
+.main_icon11 {
+  background-image: url("../assets/main_icon11.png") !important  ;
+}
 .main_icon12 {
   background-image: url("../assets/main_icon12.png") !important  ;
 }
@@ -55,7 +87,8 @@ a.button:hover {
   color: white;
 }
 .garbage {
-  height: 500px;
+  width: 100%;
+  height: 200px;
 }
 
 /* 12번 기본정보화면 박스*/

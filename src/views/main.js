@@ -2,6 +2,8 @@ import "../style/main.css";
 import React, { useEffect, useState } from "react";
 import image1 from "../assets/12_images.png";
 import icon12 from "../assets/main_icon12.png";
+import mainlog from "../assets/main_logo.png";
+import { Link, Route, Switch } from "react-router-dom";
 import {
   Navbar,
   Container,
@@ -19,26 +21,39 @@ import { isCursorAtEnd } from "@testing-library/user-event/dist/utils";
 
 function icon_insert(기본정보창상태변경) {
   var array = [];
+  var s = "main_icon12";
   var urls = "../assets/main_icon12.png";
-  var url2 =
-    "http://localhost:3000/react-flip/static/media/main_icon1.6d11817a5ef80923c88b.png";
-  for (let i = 0; i < 12; i++) {
-    if (i == 11) {
+  var z = "button main_icon12";
+  var class_name = "button main_icon";
+  var num;
+
+  for (let i = 1; i <= 12; i++) {
+    class_name = "button main_icon";
+    num = i;
+    class_name = class_name + num;
+    console.log(class_name);
+    if (i == 6) {
       array.push(
         <Col>
-          <a
-            className="button main_icon12"
-            style={{ backgroundImage: `url({icon12})` }}
-            onClick={() => {
-              기본정보창상태변경(true);
-            }}
-          ></a>
+          <Link to="/StudentManage">
+            <a
+              className={class_name}
+              onClick={() => {
+                기본정보창상태변경(true);
+              }}
+            ></a>
+          </Link>
         </Col>
       );
     } else {
       array.push(
         <Col>
-          <a href="" className="button"></a>
+          <a
+            className={class_name}
+            onClick={() => {
+              기본정보창상태변경(true);
+            }}
+          ></a>
         </Col>
       );
     }
@@ -54,7 +69,9 @@ const Main = () => {
     <div>
       <Navbar bg="light" expand={false}>
         <Container fluid>
-          <Navbar.Brand href="#">Filpplus</Navbar.Brand>
+          <Navbar.Brand href="#" style={{ fontWeight: "bold" }}>
+            Filpplus 구입문의 010-2004-1484
+          </Navbar.Brand>
 
           <Navbar.Toggle aria-controls="offcanvasNavbar" />
           <Navbar.Offcanvas
@@ -97,23 +114,21 @@ const Main = () => {
       </Navbar>
 
       <Container className="background">
-        <div className="garbage"></div>
-      </Container>
+        <img src={mainlog} alt="" style={{ width: "100%", height: "200px" }} />
 
-      {기본정보창상태 == true ? (
-        <Container>
-          <div
-            className="nomal_box"
-            onClick={() => {
-              기본정보창상태변경(false);
-            }}
-          >
-            <img src={image1} width="100%" />
-          </div>
-        </Container>
-      ) : null}
+        {기본정보창상태 == true ? (
+          <Container>
+            <div
+              className="nomal_box"
+              onClick={() => {
+                기본정보창상태변경(false);
+              }}
+            >
+              <img src={image1} width="100%" />
+            </div>
+          </Container>
+        ) : null}
 
-      <Container>
         <div className="row">{icon_insert(기본정보창상태변경)}</div>
       </Container>
     </div>

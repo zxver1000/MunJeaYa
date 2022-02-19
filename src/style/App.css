@@ -14,10 +14,8 @@
 }
 
 .background {
-  background-image: url("../assets/test1.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  width: 100%;
+  background-color: rgba(192, 192, 192, 0.438);
 }
 .row {
   margin-top: 20px;
