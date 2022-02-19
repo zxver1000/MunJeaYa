@@ -19,7 +19,7 @@ a.button button {
 }
 
 a.button:hover {
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.86);
   box-shadow: rgba(30, 22, 54, 0.3) 0 0px 10px 10px inset;
 
   /* background-color: rgba(30, 22, 54, 0.4);
