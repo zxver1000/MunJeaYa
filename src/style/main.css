@@ -5,25 +5,8 @@ a.button {
   -o-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
   transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
   display: block;
-  width: 320px;
-  height: 142px;
-  text-decoration: none;
-  border-radius: 4px;
-  padding: 20px 30px;
-  border: 1px solid;
-}
-
-.button12 {
-  background-image: url("../assets/main_icon12.png");
-  -webkit-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
-  -moz-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
-  -ms-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
-  -o-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
-  transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
-  display: block;
-
-  width: 320px;
-  height: 142px;
+  width: 250px;
+  height: 113px;
   text-decoration: none;
   border-radius: 4px;
   padding: 20px 30px;
@@ -34,52 +17,80 @@ a.button button {
   color: rgba(30, 22, 54, 0.6);
   box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;
 }
-
 .main_icon1 {
-  background-image: url("../assets/main_icon1.png") !important  ;
+  background-image: url("../assets/main_icons/main_icon1.png");
 }
 .main_icon2 {
-  background-image: url("../assets/main_icon2.png") !important  ;
+  background-image: url("../assets/main_icons/main_icon2.png");
 }
 .main_icon3 {
-  background-image: url("../assets/main_icon3.png") !important  ;
+  background-image: url("../assets/main_icons/main_icon3.png");
 }
 .main_icon4 {
-  background-image: url("../assets/main_icon4.png") !important  ;
+  background-image: url("../assets/main_icons/main_icon4.png");
 }
 .main_icon5 {
-  background-image: url("../assets/main_icon5.png") !important  ;
+  background-image: url("../assets/main_icons/main_icon5.png");
 }
 .main_icon6 {
-  background-image: url("../assets/main_icon6.png") !important  ;
+  background-image: url("../assets/main_icons/main_icon6.png");
 }
 .main_icon7 {
-  background-image: url("../assets/main_icon7.png") !important  ;
+  background-image: url("../assets/main_icons/main_icon7.png");
 }
 .main_icon8 {
-  background-image: url("../assets/main_icon8.png") !important  ;
+  background-image: url("../assets/main_icons/main_icon8.png");
 }
 .main_icon9 {
-  background-image: url("../assets/main_icon9.png") !important  ;
+  background-image: url("../assets/main_icons/main_icon9.png");
 }
 .main_icon10 {
-  background-image: url("../assets/main_icon10.png") !important  ;
+  background-image: url("../assets/main_icons/main_icon10.png");
 }
 .main_icon11 {
-  background-image: url("../assets/main_icon11.png") !important  ;
+  background-image: url("../assets/main_icons/main_icon11.png");
 }
 .main_icon12 {
-  background-image: url("../assets/main_icon12.png") !important  ;
+  background-image: url("../assets/main_icons/main_icon12.png");
 }
 
-a.button:hover {
-  color: rgba(255, 255, 255, 0.86);
-  box-shadow: rgba(30, 22, 54, 0.3) 0 0px 10px 10px inset;
-
-  /* background-color: rgba(30, 22, 54, 0.4);
-
-*/
+.main_icon1:hover {
+  background-image: url("../assets/main_icons/main_icon1_hover.png");
 }
+.main_icon2:hover {
+  background-image: url("../assets/main_icons/main_icon2_hover.png");
+}
+.main_icon3:hover {
+  background-image: url("../assets/main_icons/main_icon3_hover.png");
+}
+.main_icon4:hover {
+  background-image: url("../assets/main_icons/main_icon4_hover.png");
+}
+.main_icon5:hover {
+  background-image: url("../assets/main_icons/main_icon5_hover.png");
+}
+.main_icon6:hover {
+  background-image: url("../assets/main_icons/main_icon6_hover.png");
+}
+.main_icon7:hover {
+  background-image: url("../assets/main_icons/main_icon7_hover.png");
+}
+.main_icon8:hover {
+  background-image: url("../assets/main_icons/main_icon8_hover.png");
+}
+.main_icon9:hover {
+  background-image: url("../assets/main_icons/main_icon9_hover.png");
+}
+.main_icon10:hover {
+  background-image: url("../assets/main_icons/main_icon10_hover.png");
+}
+.main_icon11:hover {
+  background-image: url("../assets/main_icons/main_icon11_hover.png");
+}
+.main_icon12:hover {
+  background-image: url("../assets/main_icons/main_icon12_hover.png");
+}
+
 .backbox {
   padding: 20px;
   width: 100%;

@@ -1,7 +1,7 @@
 import "../style/main.css";
 import React, { useEffect, useState } from "react";
 import image1 from "../assets/12_images.png";
-import icon12 from "../assets/main_icon12.png";
+
 import mainlog from "../assets/main_logo.png";
 import { Link, Route, Switch } from "react-router-dom";
 import {
@@ -18,6 +18,56 @@ import {
   Col,
 } from "react-bootstrap";
 import { isCursorAtEnd } from "@testing-library/user-event/dist/utils";
+
+function 상단바() {
+  return (
+    <Navbar bg="light" expand={false}>
+      <Container fluid>
+        <Navbar.Brand href="#" style={{ fontWeight: "bold" }}>
+          Filpplus 구입문의 010-2004-1484
+        </Navbar.Brand>
+
+        <Navbar.Toggle aria-controls="offcanvasNavbar" />
+        <Navbar.Offcanvas
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+          placement="end"
+        >
+          <Offcanvas.Header closeButton>
+            <Offcanvas.Title id="offcanvasNavbarLabel">
+              Offcanvas
+            </Offcanvas.Title>
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            <Nav className="justify-content-end flex-grow-1 pe-3">
+              <Nav.Link href="#action1">Home</Nav.Link>
+              <Nav.Link href="#action2">Link</Nav.Link>
+              <NavDropdown title="Dropdown" id="offcanvasNavbarDropdown">
+                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+                <NavDropdown.Item href="#action4">
+                  Another action
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action5">
+                  Something else here
+                </NavDropdown.Item>
+              </NavDropdown>
+            </Nav>
+            <Form className="d-flex">
+              <FormControl
+                type="search"
+                placeholder="Search"
+                className="me-2"
+                aria-label="Search"
+              />
+              <Button variant="outline-success">Search</Button>
+            </Form>
+          </Offcanvas.Body>
+        </Navbar.Offcanvas>
+      </Container>
+    </Navbar>
+  );
+}
 
 function icon_insert(기본정보창상태변경) {
   var array = [];
@@ -67,53 +117,9 @@ const Main = () => {
 
   return (
     <div>
-      <Navbar bg="light" expand={false}>
-        <Container fluid>
-          <Navbar.Brand href="#" style={{ fontWeight: "bold" }}>
-            Filpplus 구입문의 010-2004-1484
-          </Navbar.Brand>
+      {상단바()}
 
-          <Navbar.Toggle aria-controls="offcanvasNavbar" />
-          <Navbar.Offcanvas
-            id="offcanvasNavbar"
-            aria-labelledby="offcanvasNavbarLabel"
-            placement="end"
-          >
-            <Offcanvas.Header closeButton>
-              <Offcanvas.Title id="offcanvasNavbarLabel">
-                Offcanvas
-              </Offcanvas.Title>
-            </Offcanvas.Header>
-            <Offcanvas.Body>
-              <Nav className="justify-content-end flex-grow-1 pe-3">
-                <Nav.Link href="#action1">Home</Nav.Link>
-                <Nav.Link href="#action2">Link</Nav.Link>
-                <NavDropdown title="Dropdown" id="offcanvasNavbarDropdown">
-                  <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action4">
-                    Another action
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action5">
-                    Something else here
-                  </NavDropdown.Item>
-                </NavDropdown>
-              </Nav>
-              <Form className="d-flex">
-                <FormControl
-                  type="search"
-                  placeholder="Search"
-                  className="me-2"
-                  aria-label="Search"
-                />
-                <Button variant="outline-success">Search</Button>
-              </Form>
-            </Offcanvas.Body>
-          </Navbar.Offcanvas>
-        </Container>
-      </Navbar>
-
-      <Container className="background">
+      <div className="background">
         <img src={mainlog} alt="" style={{ width: "100%", height: "200px" }} />
 
         {기본정보창상태 == true ? (
@@ -128,9 +134,10 @@ const Main = () => {
             </div>
           </Container>
         ) : null}
-
-        <div className="row">{icon_insert(기본정보창상태변경)}</div>
-      </Container>
+        <Container>
+          <div className="row">{icon_insert(기본정보창상태변경)}</div>
+        </Container>
+      </div>
     </div>
   );
 };
