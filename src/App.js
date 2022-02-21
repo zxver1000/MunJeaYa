@@ -16,7 +16,7 @@ import {
   Col,
 } from "react-bootstrap";
 import Main from "./views/main";
-import Logins from "./views/login/logins";
+import Logins from "./views/logins";
 import StudentManage from "./views/StudentManage";
 import CreatePapers from "./views/Createpaper";
 import MyPapers from "./views/MyPapers";

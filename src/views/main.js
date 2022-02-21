@@ -1,8 +1,5 @@
 import "../style/main.css";
 import React, { useEffect, useState } from "react";
-import image1 from "../assets/12_images.png";
-
-import mainlog from "../assets/main_logo.png";
 import { Link, Route, Switch } from "react-router-dom";
 import {
   Navbar,
@@ -21,7 +18,6 @@ import { isCursorAtEnd } from "@testing-library/user-event/dist/utils";
 import CourseManage from "./CourseManage";
 import StudentManage from "./StudentManage";
 import TreeManage from "./TreeManage";
-import CreateBooks from "./CreateBooks";
 import PaperRegistration from "./PaperRegistration";
 import ErrorCorrection from "./ErrorCorrection";
 import ConfirmRepetition from "./ConfirmRepettion";
@@ -78,9 +74,6 @@ function 상단바() {
 
 function icon_insert(기본정보창상태변경) {
   var array = [];
-  var s = "main_icon12";
-  var urls = "../assets/main_icon12.png";
-  var z = "button main_icon12";
   var class_name = "button main_icon";
   var num;
   let icon_name = [
