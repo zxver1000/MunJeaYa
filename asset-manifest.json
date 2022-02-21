@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-flip/static/css/main.c51d05a6.css",
-    "main.js": "/react-flip/static/js/main.caba6bea.js",
+    "main.js": "/react-flip/static/js/main.e4ac0813.js",
     "static/js/787.a13aa905.chunk.js": "/react-flip/static/js/787.a13aa905.chunk.js",
     "static/media/12_images.png": "/react-flip/static/media/12_images.173b7a57d9c7158a466a.png",
     "static/media/main_logo.png": "/react-flip/static/media/main_logo.cace2b28c2d6fa2a12d9.png",
@@ -9,11 +9,11 @@
     "static/media/main_icon10_hover.png": "/react-flip/static/media/main_icon10_hover.09c32bdba77e15cf28b0.png",
     "index.html": "/react-flip/index.html",
     "main.c51d05a6.css.map": "/react-flip/static/css/main.c51d05a6.css.map",
-    "main.caba6bea.js.map": "/react-flip/static/js/main.caba6bea.js.map",
+    "main.e4ac0813.js.map": "/react-flip/static/js/main.e4ac0813.js.map",
     "787.a13aa905.chunk.js.map": "/react-flip/static/js/787.a13aa905.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c51d05a6.css",
-    "static/js/main.caba6bea.js"
+    "static/js/main.e4ac0813.js"
   ]
 }
