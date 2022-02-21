@@ -11,6 +11,17 @@ import Contact from "./views/contact";
 import Login from "./views/login/login";
 import Logins from "./views/login/logins";
 import StudentManage from "./views/StudentManage";
+import CreatePapers from "./views/CreatePapers";
+import MyPapers from "./views/MyPapers";
+import IncorrectManage from "./views/IncorrectManage";
+import RecordingCards from "./views/RecordingCards";
+import CourseManage from "./views/CourseManage";
+import TreeManage from "./views/TreeManage";
+import CreateBooks from "./views/CreateBooks";
+import PaperRegistration from "./views/PaperRegistration";
+import ErrorCorrection from "./views/ErrorCorrection";
+import ConfirmRepetition from "./views/ConfirmRepettion";
+import BasicInformation from "./views/BasicInformation";
 
 function App() {
   return (
@@ -24,8 +35,43 @@ function App() {
           <Main />
         </Route>
 
-        <Route exact path="/contact">
-          <Login />
+        <Route exact path="/:">
+          <Main />
+        </Route>
+        <Route exact path="/CreatePapers">
+          <CreatePapers />
+        </Route>
+        <Route exact path="/MyPapers">
+          <MyPapers />
+        </Route>
+        <Route exact path="/IncorrectManage">
+          <IncorrectManage />
+        </Route>
+        <Route exact path="/RecordingCards">
+          <RecordingCards />
+        </Route>
+        <Route exact path="/CourseManage">
+          <CourseManage />
+        </Route>
+
+        <Route exact path="/TreeManage">
+          <TreeManage />
+        </Route>
+        <Route exact path="/CreateBooks">
+          <CreateBooks />
+        </Route>
+        <Route exact path="/PaperRegistration">
+          <PaperRegistration />
+        </Route>
+
+        <Route exact path="/ErrorCorrection">
+          <ErrorCorrection />
+        </Route>
+        <Route exact path="/ConfirmRepetition">
+          <ConfirmRepetition />
+        </Route>
+        <Route exact path="/BasicInformation">
+          <BasicInformation />
         </Route>
 
         <Route exact path="/StudentManage">

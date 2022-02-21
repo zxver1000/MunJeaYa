@@ -18,6 +18,13 @@ import {
   Col,
 } from "react-bootstrap";
 import { isCursorAtEnd } from "@testing-library/user-event/dist/utils";
+import CourseManage from "./CourseManage";
+import StudentManage from "./StudentManage";
+import TreeManage from "./TreeManage";
+import CreateBooks from "./CreateBooks";
+import PaperRegistration from "./PaperRegistration";
+import ErrorCorrection from "./ErrorCorrection";
+import ConfirmRepetition from "./ConfirmRepettion";
 
 function 상단바() {
   return (
@@ -76,37 +83,38 @@ function icon_insert(기본정보창상태변경) {
   var z = "button main_icon12";
   var class_name = "button main_icon";
   var num;
-
+  var icon_name = [
+    "CreatePaper",
+    "MyPapers",
+    "IncorrectManage",
+    "RecordingCards",
+    "CourseManage",
+    "StudentManage",
+    "TreeManage",
+    "CreateBooks",
+    "PaperRegistration",
+    "ErrorCorrection",
+    "ConfirmRepetition",
+    "BasicInformation",
+  ];
   for (let i = 1; i <= 12; i++) {
     class_name = "button main_icon";
     num = i;
     class_name = class_name + num;
     console.log(class_name);
-    if (i == 6) {
-      array.push(
-        <Col>
-          <Link to="/StudentManage">
-            <a
-              className={class_name}
-              onClick={() => {
-                기본정보창상태변경(true);
-              }}
-            ></a>
-          </Link>
-        </Col>
-      );
-    } else {
-      array.push(
-        <Col>
+
+    array.push(
+      <Col>
+        <Link to={icon_name[i - 1]}>
           <a
             className={class_name}
             onClick={() => {
               기본정보창상태변경(true);
             }}
           ></a>
-        </Col>
-      );
-    }
+        </Link>
+      </Col>
+    );
   }
 
   return array;
