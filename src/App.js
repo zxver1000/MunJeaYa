@@ -30,6 +30,7 @@ import ErrorCorrection from "./views/ErrorCorrection";
 import ConfirmRepetition from "./views/ConfirmRepettion";
 import BasicInformation from "./views/BasicInformation";
 import mainlog from "./assets/main_logo.png";
+import Login_new from "./views/login";
 function 상단바() {
   return (
     <Navbar bg="light" expand={false}>
@@ -79,13 +80,14 @@ function 상단바() {
     </Navbar>
   );
 }
-
+var 로고온 = false;
 function App() {
   return (
     <div>
       <Route exact path="/">
         <Logins />
       </Route>
+
       {상단바()}
 
       <div className="background">
@@ -94,6 +96,10 @@ function App() {
         </Link>
 
         <Switch>
+          <Route exact path="/test">
+            <Login_new />
+          </Route>
+
           <Route exact path="/main">
             <Main />
           </Route>
