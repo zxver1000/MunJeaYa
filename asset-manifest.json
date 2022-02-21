@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/react-flip/static/css/main.efc6858d.css",
-    "main.js": "/react-flip/static/js/main.cac5219c.js",
+    "main.css": "/react-flip/static/css/main.c51d05a6.css",
+    "main.js": "/react-flip/static/js/main.caba6bea.js",
     "static/js/787.a13aa905.chunk.js": "/react-flip/static/js/787.a13aa905.chunk.js",
-    "static/media/test1.jpg": "/react-flip/static/media/test1.dbcf466d764adff5802b.jpg",
-    "static/media/logo.svg": "/react-flip/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/12_images.png": "/react-flip/static/media/12_images.173b7a57d9c7158a466a.png",
+    "static/media/main_logo.png": "/react-flip/static/media/main_logo.cace2b28c2d6fa2a12d9.png",
+    "static/media/main_icon10.png": "/react-flip/static/media/main_icon10.03e750ff69f6aaa5b1ec.png",
+    "static/media/main_icon10_hover.png": "/react-flip/static/media/main_icon10_hover.09c32bdba77e15cf28b0.png",
     "index.html": "/react-flip/index.html",
-    "main.efc6858d.css.map": "/react-flip/static/css/main.efc6858d.css.map",
-    "main.cac5219c.js.map": "/react-flip/static/js/main.cac5219c.js.map",
+    "main.c51d05a6.css.map": "/react-flip/static/css/main.c51d05a6.css.map",
+    "main.caba6bea.js.map": "/react-flip/static/js/main.caba6bea.js.map",
     "787.a13aa905.chunk.js.map": "/react-flip/static/js/787.a13aa905.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.efc6858d.css",
-    "static/js/main.cac5219c.js"
+    "static/css/main.c51d05a6.css",
+    "static/js/main.caba6bea.js"
   ]
 }
