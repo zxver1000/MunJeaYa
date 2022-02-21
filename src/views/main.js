@@ -91,7 +91,7 @@ function icon_insert(기본정보창상태변경) {
     "CourseManage",
     "StudentManage",
     "TreeManage",
-    "CreateBooks",
+    "Createbook",
     "PaperRegistration",
     "ErrorCorrection",
     "ConfirmRepetition",

@@ -10,7 +10,7 @@ const StudentManage = () => {
     { id: 0, title: "Example" },
     { id: 1, title: "Demo" },
   ];
-  return <div>그리드왜안되냐</div>;
+  return <div>StudentManage</div>;
 };
 
 export default StudentManage;
