@@ -83,9 +83,9 @@ function icon_insert(기본정보창상태변경) {
   var z = "button main_icon12";
   var class_name = "button main_icon";
   var num;
-  var icon_name = [
+  let icon_name = [
     "CreatePaper",
-    "MyPapers",
+    "myPapers",
     "IncorrectManage",
     "RecordingCards",
     "CourseManage",

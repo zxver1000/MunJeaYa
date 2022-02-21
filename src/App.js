@@ -26,58 +26,53 @@ import BasicInformation from "./views/BasicInformation";
 function App() {
   return (
     <div>
-      <Switch>
-        <Route exact path="/">
-          <Logins />
-        </Route>
+      <Route exact path="/">
+        <Logins />
+      </Route>
 
-        <Route exact path="/main">
-          <Main />
-        </Route>
+      <Route exact path="/main">
+        <Main />
+      </Route>
 
-        <Route exact path="/:">
-          <Main />
-        </Route>
-        <Route exact path="/CreatePapers">
-          <CreatePapers />
-        </Route>
-        <Route exact path="/MyPapers">
-          <MyPapers />
-        </Route>
-        <Route exact path="/IncorrectManage">
-          <IncorrectManage />
-        </Route>
-        <Route exact path="/RecordingCards">
-          <RecordingCards />
-        </Route>
-        <Route exact path="/CourseManage">
-          <CourseManage />
-        </Route>
+      <Route exact path="/CreatePapers">
+        <CreatePapers />
+      </Route>
+      <Route exact path="/myPapers">
+        <MyPapers />
+      </Route>
+      <Route exact path="/IncorrectManage">
+        <IncorrectManage />
+      </Route>
+      <Route exact path="/RecordingCards">
+        <RecordingCards />
+      </Route>
+      <Route exact path="/CourseManage">
+        <CourseManage />
+      </Route>
 
-        <Route exact path="/TreeManage">
-          <TreeManage />
-        </Route>
-        <Route exact path="/CreateBooks">
-          <CreateBooks />
-        </Route>
-        <Route exact path="/PaperRegistration">
-          <PaperRegistration />
-        </Route>
+      <Route exact path="/TreeManage">
+        <TreeManage />
+      </Route>
+      <Route exact path="/CreateBooks">
+        <CreateBooks />
+      </Route>
+      <Route exact path="/PaperRegistration">
+        <PaperRegistration />
+      </Route>
 
-        <Route exact path="/ErrorCorrection">
-          <ErrorCorrection />
-        </Route>
-        <Route exact path="/ConfirmRepetition">
-          <ConfirmRepetition />
-        </Route>
-        <Route exact path="/BasicInformation">
-          <BasicInformation />
-        </Route>
+      <Route exact path="/ErrorCorrection">
+        <ErrorCorrection />
+      </Route>
+      <Route exact path="/ConfirmRepetition">
+        <ConfirmRepetition />
+      </Route>
+      <Route exact path="/BasicInformation">
+        <BasicInformation />
+      </Route>
 
-        <Route exact path="/StudentManage">
-          <StudentManage />
-        </Route>
-      </Switch>
+      <Route exact path="/StudentManage">
+        <StudentManage />
+      </Route>
     </div>
   );
 }

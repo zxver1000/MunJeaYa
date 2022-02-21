@@ -1,7 +1,8 @@
 import * as React from "react";
 
-const BasicInfromation = () => {
-  return <div>그리드왜안되냐</div>;
+const BasicInformation = () => {
+  const re = 1;
+  return <div>BasicInformation</div>;
 };
 
-export default BasicInfromation;
+export default BasicInformation;
