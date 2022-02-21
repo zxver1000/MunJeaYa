@@ -13,6 +13,12 @@ a.button {
   border: 1px solid;
 }
 
+.main-background {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 3em;
+}
+
 a.button button {
   color: rgba(30, 22, 54, 0.6);
   box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;

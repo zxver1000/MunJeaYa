@@ -89,7 +89,9 @@ function App() {
       {상단바()}
 
       <div className="background">
-        <img src={mainlog} alt="" style={{ width: "100%", height: "200px" }} />
+        <Link to="/main">
+          <img className="main-background" src={mainlog} />
+        </Link>
 
         <Switch>
           <Route exact path="/main">

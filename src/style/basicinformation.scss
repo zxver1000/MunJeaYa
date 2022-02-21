@@ -1,0 +1,17 @@
+.basicinformation {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .basicinformation-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .basicinformation-button {
+    padding: 0.5em 3em;
+    margin: 0.125em 1.25em;
+    font-weight: bold;
+  }
+}

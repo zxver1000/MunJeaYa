@@ -75,7 +75,6 @@ function 상단바() {
 function icon_insert(기본정보창상태변경) {
   var array = [];
   var class_name = "button main_icon";
-  var num;
   let icon_name = [
     "CreatePaper",
     "myPapers",
@@ -91,21 +90,17 @@ function icon_insert(기본정보창상태변경) {
     "BasicInformation",
   ];
   for (let i = 1; i <= 12; i++) {
-    class_name = "button main_icon";
-    num = i;
-    class_name = class_name + num;
-    console.log(class_name);
+    class_name = "button main_icon" + i;
 
     array.push(
-      <Col>
-        <Link to={icon_name[i - 1]}>
-          <a
-            className={class_name}
-            onClick={() => {
-              기본정보창상태변경(true);
-            }}
-          ></a>
-        </Link>
+      <Col key={class_name}>
+        <Link
+          to={icon_name[i - 1]}
+          className={class_name}
+          onClick={() => {
+            기본정보창상태변경(true);
+          }}
+        ></Link>
       </Col>
     );
   }
