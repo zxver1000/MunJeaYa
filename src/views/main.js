@@ -124,29 +124,9 @@ const Main = () => {
   let [기본정보창상태, 기본정보창상태변경] = useState(false);
 
   return (
-    <div>
-      {상단바()}
-
-      <div className="background">
-        <img src={mainlog} alt="" style={{ width: "100%", height: "200px" }} />
-
-        {기본정보창상태 == true ? (
-          <Container>
-            <div
-              className="nomal_box"
-              onClick={() => {
-                기본정보창상태변경(false);
-              }}
-            >
-              <img src={image1} width="100%" />
-            </div>
-          </Container>
-        ) : null}
-        <Container>
-          <div className="row">{icon_insert(기본정보창상태변경)}</div>
-        </Container>
-      </div>
-    </div>
+    <Container>
+      <div className="row">{icon_insert(기본정보창상태변경)}</div>
+    </Container>
   );
 };
 
