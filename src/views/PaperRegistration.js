@@ -22,7 +22,23 @@ const PaperRegistration = () => {
         <img className="paperregistration-image left" src={main_icon9_hover} />
       </aside>
       {/* pagename-main :: 해당 페이지의 주 내용 부분이 담기는 부분 */}
-      <div className="paperregistration-main"></div>
+      <div className="paperregistration-main">
+        <section>
+          <section>
+            <article className="image top"></article>
+            <article className="buttons middle">
+              <section className=""></section>
+              <section></section>
+              <section></section>
+              <section></section>
+            </article>
+            <article className="image bottom"></article>
+          </section>
+          <section>
+            <img className="image right" src={main_icon9_hover} />
+          </section>
+        </section>
+      </div>
       {/* aside right :: 해당 페이지의 Flow를 설명하는 부분 + 메인으로 돌아가는 버튼 존재 */}
       <aside className="right">
         <Link to="/main">
