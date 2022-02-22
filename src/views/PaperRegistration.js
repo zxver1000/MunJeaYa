@@ -3,9 +3,16 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import main_icon12_hover from "../assets/main_icons/main_icon12_hover.png";
-import insert_info from "../assets/basicinformation/12_basicinformation_before.png";
-import modify_info from "../assets/basicinformation/12_basicinformation_after.png";
-import reset_info from "../assets/basicinformation/12_basicinformation_before.png";
+
+import basic from "../assets/paperregistration/9-01.png";
+import category_insert from "../assets/paperregistration/9-02.png";
+import etc from "../assets/paperregistration/9-03.png";
+import problem_select from "../assets/paperregistration/9-04.png";
+import problem_insert from "../assets/paperregistration/9-05.png";
+import problem_check from "../assets/paperregistration/9-06.png";
+import problem_upload from "../assets/paperregistration/9-07.png";
+import problem_delete from "../assets/paperregistration/9-08.png";
+
 /*
   하단 title, summary, imagename 작성하여 개수만 늘려주면 됨
   title     : 버튼이름
@@ -14,23 +21,50 @@ import reset_info from "../assets/basicinformation/12_basicinformation_before.pn
  */
 const InitButtonData = [
   {
-    title: "회원(학원) 정보 입력",
-    summary: "회원(학원)정보의 회원 정보를 입력할 수 있습니다.",
-    imagename: insert_info,
+    title: "문제 등록 기본 화면",
+    summary: "설명 쓰는 곳",
+    imagename: basic,
   },
   {
-    title: "회원(학원) 정보 수정",
-    summary: "회원(학원)정보의 회원 정보를 수정할 수 있습니다.",
-    imagename: modify_info,
+    title: "카테고리 선택",
+    summary: "설명 쓰는 곳",
+    imagename: category_insert,
   },
   {
-    title: "초기화",
-    summary: "회원(학원)정보의 회원 정보를 초기화 수 있습니다.",
-    imagename: reset_info,
+    title: "...",
+    summary: "설명 쓰는 곳",
+    imagename: etc,
+  },
+  {
+    title: "문제지 선택",
+    summary: "설명 쓰는 곳",
+    imagename: problem_select,
+  },
+  {
+    title: "문제지 등록하기",
+    summary: "설명 쓰는 곳",
+    imagename: problem_insert,
+  },
+  {
+    title: "문제 개수 확인",
+    summary: "설명 쓰는 곳",
+    imagename: problem_check,
+  },
+  {
+    title: "문제지 추출 및 업로드",
+    summary: "설명 쓰는 곳",
+    imagename: problem_upload,
+    message: "문제가 등록되었습니다.",
+  },
+  {
+    title: "시험지 삭제",
+    summary: "설명 쓰는 곳",
+    imagename: problem_delete,
+    message: "삭제되었습니다.",
   },
 ];
 const PaperRegistration = () => {
-  const [mainImage, setMainImage] = useState(reset_info);
+  const [mainImage, setMainImage] = useState(basic);
   const [mainSummary, setMainSummary] = useState("");
   return (
     <div className="paperregistration">
@@ -61,6 +95,7 @@ const PaperRegistration = () => {
                 onClick={() => {
                   setMainImage(item.imagename);
                   setMainSummary(item.summary);
+                  if (item.message != null) alert(item.message);
                 }}
               >
                 <div className="button-value">{item.title}</div>
