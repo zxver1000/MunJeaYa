@@ -4,8 +4,17 @@ import { Link } from "react-router-dom";
 
 import { LooksOneIcon, LooksTwoIcon } from "./components/Icon";
 
+import main_icon12_hover from "../assets/main_icons/main_icon12_hover.png";
+import category_after from "../assets/paperregistration/9_category_after.png";
+import category_before from "../assets/paperregistration/9_category_before.png";
+import fileopen_after from "../assets/paperregistration/9_fileopen_after.png";
+import fileopen_before from "../assets/paperregistration/9_fileopen_before.png";
+import fileselect_empty from "../assets/paperregistration/9_fileselect_empty.png";
+import fileselect_fill from "../assets/paperregistration/9_fileselect_fill.png";
+import fileselect_ischecked from "../assets/paperregistration/9_fileselect_ischecked.png";
+import fileepreview from "../assets/paperregistration/9_preview.png";
+
 const PaperRegistration = () => {
-  const [mainImage, setMainImage] = useState(paperregistration_before);
   return (
     <div className="paperregistration">
       {/* aside left :: 해당 페이지 정보 이미지로 표기하는 부분 */}

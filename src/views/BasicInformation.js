@@ -2,9 +2,9 @@ import "../style/basicinformation.scss";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+import main_icon12_hover from "../assets/main_icons/main_icon12_hover.png";
 import basicinformation_before from "../assets/basicinformation/12_basicinformation_before.png";
 import basicinformation_after from "../assets/basicinformation/12_basicinformation_after.png";
-import main_icon12_hover from "../assets/main_icons/main_icon12_hover.png";
 
 import { LooksOneIcon, LooksTwoIcon } from "./components/Icon";
 
