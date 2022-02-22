@@ -1,17 +1,39 @@
 .basicinformation {
   display: flex;
-  position: relative;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  .basicinformation-image {
-    position: absolute;
-    left: 0;
-    top: 0;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  width: 100%;
+  aside {
+    width: 12.5%;
+    .basicinformation-image {
+      width: 100%;
+    }
+    &.left {
+    }
+    &.right {
+    }
   }
-  .basicinformation-button {
-    padding: 0.5em 3em;
-    margin: 0.125em 1.25em;
-    font-weight: bold;
+  .basicinformation-main {
+    width: 60%;
+    .image {
+      width: 100%;
+    }
+  }
+}
+.basicinformation-main {
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .button {
+      margin: 0.125em 1.5em;
+      padding: 0.25em 1.5em;
+      font-weight: bold;
+      .button-value {
+        display: flex;
+      }
+    }
   }
 }
