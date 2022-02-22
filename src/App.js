@@ -18,13 +18,13 @@ import {
 import Main from "./views/main";
 import Logins from "./views/logins";
 import StudentManage from "./views/StudentManage";
-import CreatePapers from "./views/Createpaper";
+import CreatePaper from "./views/CreatePaper";
 import MyPapers from "./views/MyPapers";
 import IncorrectManage from "./views/IncorrectManage";
 import RecordingCards from "./views/RecordingCards";
 import CourseManage from "./views/CourseManage";
 import TreeManage from "./views/TreeManage";
-import Createbook from "./views/Createbook";
+import CreateBook from "./views/CreateBook";
 import PaperRegistration from "./views/PaperRegistration";
 import ErrorCorrection from "./views/ErrorCorrection";
 import ConfirmRepetition from "./views/ConfirmRepettion";
@@ -105,7 +105,7 @@ function App() {
           </Route>
 
           <Route exact path="/CreatePaper">
-            <CreatePapers />
+            <CreatePaper />
           </Route>
 
           <Route exact path="/myPapers">
@@ -124,8 +124,8 @@ function App() {
           <Route exact path="/TreeManage">
             <TreeManage />
           </Route>
-          <Route exact path="/Createbook">
-            <Createbook />
+          <Route exact path="/CreateBook">
+            <CreateBook />
           </Route>
           <Route exact path="/PaperRegistration">
             <PaperRegistration />

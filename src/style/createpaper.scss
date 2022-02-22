@@ -1,4 +1,4 @@
-.paperregistration {
+.createpaper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -7,7 +7,7 @@
   width: 100%;
   aside {
     width: 12.5%;
-    .paperregistration-image {
+    .createpaper-image {
       width: 100%;
     }
     &.left {
@@ -15,7 +15,7 @@
     &.right {
     }
   }
-  .paperregistration-main {
+  .createpaper-main {
     display: flex;
     flex-direction: column;
     justify-content: center;
