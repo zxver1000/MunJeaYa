@@ -1,0 +1,78 @@
+.paperregistration {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  width: 100%;
+  aside {
+    width: 12.5%;
+    .paperregistration-image {
+      width: 100%;
+    }
+    &.left {
+    }
+    &.right {
+    }
+  }
+  .paperregistration {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    width: 100%;
+    aside {
+      width: 12.5%;
+      .paperregistration-image {
+        width: 100%;
+      }
+      &.left {
+      }
+      &.right {
+      }
+    }
+    .paperregistration-main {
+      width: 60%;
+      .image {
+        width: 100%;
+      }
+    }
+  }
+  .paperregistration-main {
+    .buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .button {
+        margin: 0.125em 1.5em;
+        padding: 0.25em 1.5em;
+        font-weight: bold;
+        .button-value {
+          display: flex;
+        }
+      }
+    }
+  }
+  -main {
+    width: 60%;
+    .image {
+      width: 100%;
+    }
+  }
+}
+.paperregistration-main {
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .button {
+      margin: 0.125em 1.5em;
+      padding: 0.25em 1.5em;
+      font-weight: bold;
+      .button-value {
+        display: flex;
+      }
+    }
+  }
+}

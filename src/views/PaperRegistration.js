@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import { LooksOneIcon, LooksTwoIcon } from "./components/Icon";
 
-import main_icon12_hover from "../assets/main_icons/main_icon12_hover.png";
+import main_icon9_hover from "../assets/main_icons/main_icon9_hover.png";
 import category_after from "../assets/paperregistration/9_category_after.png";
 import category_before from "../assets/paperregistration/9_category_before.png";
 import fileopen_after from "../assets/paperregistration/9_fileopen_after.png";
@@ -19,7 +19,7 @@ const PaperRegistration = () => {
     <div className="paperregistration">
       {/* aside left :: 해당 페이지 정보 이미지로 표기하는 부분 */}
       <aside className="left">
-        <img className="paperregistration-image left" src={main_icon12_hover} />
+        <img className="paperregistration-image left" src={main_icon9_hover} />
       </aside>
       {/* pagename-main :: 해당 페이지의 주 내용 부분이 담기는 부분 */}
       <div className="paperregistration-main"></div>
@@ -28,7 +28,7 @@ const PaperRegistration = () => {
         <Link to="/main">
           <img
             className="paperregistration-image right"
-            src={main_icon12_hover}
+            src={main_icon9_hover}
           />
         </Link>
         <section>
