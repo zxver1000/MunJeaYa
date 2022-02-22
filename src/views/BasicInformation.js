@@ -2,14 +2,36 @@ import "../style/basicinformation.scss";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import basicinformation_before from "../assets/basicinformation/12_basicinformation_before.png";
-import basicinformation_after from "../assets/basicinformation/12_basicinformation_after.png";
 import main_icon12_hover from "../assets/main_icons/main_icon12_hover.png";
-
-import { LooksOneIcon, LooksTwoIcon } from "./components/Icon";
-
+import insert_info from "../assets/basicinformation/12_basicinformation_before.png";
+import modify_info from "../assets/basicinformation/12_basicinformation_after.png";
+import reset_info from "../assets/basicinformation/12_basicinformation_before.png";
+/*
+  하단 title, summary, imagename 작성하여 개수만 늘려주면 됨
+  title     : 버튼이름
+  summary   : 버튼을 눌렀을 때, 나오는 설명
+  imagename : import된 이름만 작성(경로, .png 작성 X)
+ */
+const InitButtonData = [
+  {
+    title: "회원(학원) 정보 입력",
+    summary: "회원(학원)정보의 회원 정보를 입력할 수 있습니다.",
+    imagename: insert_info,
+  },
+  {
+    title: "회원(학원) 정보 수정",
+    summary: "회원(학원)정보의 회원 정보를 수정할 수 있습니다.",
+    imagename: modify_info,
+  },
+  {
+    title: "초기화",
+    summary: "회원(학원)정보의 회원 정보를 초기화 수 있습니다.",
+    imagename: reset_info,
+  },
+];
 const BasicInformation = () => {
-  const [mainImage, setMainImage] = useState(basicinformation_before);
+  const [mainImage, setMainImage] = useState(reset_info);
+  const [mainSummary, setMainSummary] = useState("");
   return (
     <div className="basicinformation">
       {/* aside left :: 해당 페이지 정보 이미지로 표기하는 부분 */}
@@ -19,39 +41,7 @@ const BasicInformation = () => {
       {/* pagename-main :: 해당 페이지의 주 내용 부분이 담기는 부분 */}
       <div className="basicinformation-main">
         <img className="image" src={mainImage} />
-        <div className="buttons">
-          <button
-            className="button"
-            type="button"
-            onClick={() => setMainImage(basicinformation_after)}
-          >
-            <div className="button-value">
-              회원(학원) 정보 입력
-              <LooksOneIcon></LooksOneIcon>
-            </div>
-          </button>
-          <button
-            className="button"
-            type="button"
-            onClick={() => {
-              mainImage == basicinformation_before
-                ? alert("정보를 입력해주세요.")
-                : alert("수정 완료되었습니다.");
-            }}
-          >
-            <div className="button-value">
-              회원(학원) 정보 입력
-              <LooksTwoIcon></LooksTwoIcon>
-            </div>
-          </button>
-          <button
-            className="button"
-            type="button"
-            onClick={() => setMainImage(basicinformation_before)}
-          >
-            <div className="button-value">초기화</div>
-          </button>
-        </div>
+        <article className="summary">{mainSummary}</article>
       </div>
       {/* aside right :: 해당 페이지의 Flow를 설명하는 부분 + 메인으로 돌아가는 버튼 존재 */}
       <aside className="right">
@@ -61,14 +51,22 @@ const BasicInformation = () => {
             src={main_icon12_hover}
           />
         </Link>
-        <section>
-          번호가 입력된 부분을 클릭하면 다음을 실행할 수 있습니다.
-          <article>
-            <LooksOneIcon></LooksOneIcon>회원 정보를 입력할 수 있습니다.
-          </article>
-          <article>
-            <LooksTwoIcon></LooksTwoIcon>회원 정보를 입력할 수 있습니다.
-          </article>
+        <section className="buttons">
+          아래 버튼을 클릭하면 가운데 실행화면을 볼 수 있습니다.
+          {InitButtonData.map((item, index) => {
+            return (
+              <button
+                className="button"
+                key={"button" + index}
+                onClick={() => {
+                  setMainImage(item.imagename);
+                  setMainSummary(item.summary);
+                }}
+              >
+                <div className="button-value">{item.title}</div>
+              </button>
+            );
+          })}
         </section>
       </aside>
     </div>
