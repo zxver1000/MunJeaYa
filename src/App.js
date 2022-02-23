@@ -17,7 +17,7 @@ import {
 } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Main from "./views/main";
-import Logins from "./views/logins";
+import Logins from "./views/login";
 import StudentManage from "./views/StudentManage";
 import CreatePaper from "./views/CreatePaper";
 import MyPapers from "./views/MyPapers";
@@ -85,16 +85,15 @@ var 로고온 = false;
 function App() {
   return (
     <div className="background">
-      <Route exact path="/">
-        <Logins />
-      </Route>
-
       {상단바()}
 
       <div>
         <Link to="/main">
           <img className="main-background" src={mainlog} />
         </Link>
+        <Route exact path="/">
+          <Logins />
+        </Route>
 
         <Switch>
           <Route exact path="/test">
