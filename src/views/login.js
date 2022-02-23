@@ -3,6 +3,8 @@ import "../style/login_new.scss";
 import Imageex from "../assets/login/ex.bmp";
 import imageid from "../assets/login/Loginid.png";
 import imagepw from "../assets/login/Loginpw.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHouseChimney } from "@fortawesome/free-solid-svg-icons";
 
 import {
   Navbar,
@@ -34,7 +36,9 @@ const Login_new = () => {
           <Row className="item" xs="1">
             <Col xs="4">이등분</Col>
             <Col xs="4">이등분</Col>
-            <Col xs="4">이등분</Col>
+            <Col xs="4">
+              <FontAwesomeIcon icon={faHouseChimney} size="4x" />
+            </Col>
           </Row>
           <Row className="item" xs="2">
             <div className="right_user">

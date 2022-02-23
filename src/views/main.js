@@ -93,7 +93,7 @@ function icon_insert(기본정보창상태변경) {
     class_name = "button main_icon" + i;
 
     array.push(
-      <Col key={class_name} xs="6" md="6" lg="3">
+      <Col key={class_name}>
         <Link
           to={icon_name[i - 1]}
           className={class_name}
@@ -113,9 +113,7 @@ const Main = () => {
 
   return (
     <Container>
-      <Row xs="3" md="6" lg="3">
-        {icon_insert(기본정보창상태변경)}
-      </Row>
+      <Row>{icon_insert(기본정보창상태변경)}</Row>
     </Container>
   );
 };

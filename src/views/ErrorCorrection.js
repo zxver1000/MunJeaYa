@@ -2,6 +2,8 @@ import "../style/errorcorrection.scss";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHouseChimney } from "@fortawesome/free-solid-svg-icons";
 import main_icon12_hover from "../assets/main_icons/main_icon12_hover.png";
 import insert_info from "../assets/basicinformation/12_basicinformation_before.png";
 import modify_info from "../assets/basicinformation/12_basicinformation_after.png";
@@ -46,10 +48,7 @@ const ErrorCorrection = () => {
       {/* aside right :: 해당 페이지의 Flow를 설명하는 부분 + 메인으로 돌아가는 버튼 존재 */}
       <aside className="right">
         <Link to="/main">
-          <img
-            className="errorcorrection-image right"
-            src={main_icon12_hover}
-          />
+          <FontAwesomeIcon icon={faHouseChimney} size="3x" />
         </Link>
         <section className="buttons">
           아래 버튼을 클릭하면 가운데 실행화면을 볼 수 있습니다.

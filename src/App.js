@@ -15,6 +15,7 @@ import {
   Row,
   Col,
 } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Main from "./views/main";
 import Logins from "./views/logins";
 import StudentManage from "./views/StudentManage";
@@ -146,6 +147,7 @@ function App() {
           </Route>
         </Switch>
       </div>
+      <FontAwesomeIcon icon="fa-solid fa-house-chimney" size="4x" />
     </div>
   );
 }
