@@ -83,14 +83,14 @@ function 상단바() {
 var 로고온 = false;
 function App() {
   return (
-    <div>
+    <div className="background">
       <Route exact path="/">
         <Logins />
       </Route>
 
       {상단바()}
 
-      <div className="background">
+      <div>
         <Link to="/main">
           <img className="main-background" src={mainlog} />
         </Link>
