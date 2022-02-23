@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import main_icon5_hover from "../assets/main_icons/main_icon5_hover.png";
-
+import go_main from "../assets/goMain.png";
 import course_manage_01 from "../assets/coursemanage/05-01.png";
 import course_manage_02 from "../assets/coursemanage/05-02.png";
 import course_manage_03 from "../assets/coursemanage/05-03.png";
@@ -73,7 +73,7 @@ const CourseManage = () => {
       {/* aside right :: 해당 페이지의 Flow를 설명하는 부분 + 메인으로 돌아가는 버튼 존재 */}
       <aside className="right">
         <Link to="/main">
-          <img className="coursemanage-image right" src={main_icon5_hover} />
+          <img className="coursemanage-image right" src={go_main} />
         </Link>
         <section className="buttons">
           아래 버튼을 클릭하면 가운데 실행화면을 볼 수 있습니다.

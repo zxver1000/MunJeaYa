@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import main_icon9_hover from "../assets/main_icons/main_icon9_hover.png";
-
+import go_main from "../assets/goMain.png";
 import basic from "../assets/paperregistration/9-01.png";
 import category_insert from "../assets/paperregistration/9-02.png";
 import etc from "../assets/paperregistration/9-03.png";
@@ -82,10 +82,7 @@ const PaperRegistration = () => {
       {/* aside right :: 해당 페이지의 Flow를 설명하는 부분 + 메인으로 돌아가는 버튼 존재 */}
       <aside className="right">
         <Link to="/main">
-          <img
-            className="paperregistration-image right"
-            src={main_icon9_hover}
-          />
+          <img className="paperregistration-image right" src={go_main} />
         </Link>
         <section className="buttons">
           아래 버튼을 클릭하면 가운데 실행화면을 볼 수 있습니다.
