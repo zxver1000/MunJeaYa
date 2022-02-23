@@ -30,86 +30,88 @@ import student_manage_16 from "../assets/studentmanage/06-16.png";
 const InitButtonData = [
   {
     title: "excel 일괄등록",
-    summary: "엑셀에 있는 학생들 정보를 저장할 수 있습니다.",
+    summary: "엑셀에 있는 학생들 정보를 저장할수 있는 기능입니다.",
     imagename: student_manage_02,
-    alertMessage: "1의 학생을 등록하였습니다",
+    alertMessage: "1명의 학생을 등록하였습니다",
   },
   {
     title: "신규 학생 등록",
-    summary: "설명쓰세욤",
+    summary: "신규 학생을 등록하는 기능입니다.",
     imagename: student_manage_03,
   },
   {
     title: "학생 정보 입력",
-    summary: "설명쓰세욤",
+    summary: "학생 정보 입력",
     imagename: student_manage_04,
   },
   {
     title: "학생 등록하기",
-    summary: "설명쓰세욤",
+    summary: "학생정보가 등록된것을 확인하실수 있습니다.",
     imagename: student_manage_05,
   },
   {
     title: "학생 정보 수정",
-    summary: "설명쓰세욤",
+    summary: "학생정보를 수정할수있는 기능입니다",
     imagename: student_manage_06,
   },
   {
     title: "수정 데이터 입력",
-    summary: "설명쓰세욤",
+    summary: "수정할 데이터 입력",
     imagename: student_manage_07,
   },
   {
     title: "학생 정보 수정",
-    summary: "설명쓰세욤",
+    summary: "학생 정보 수정",
     imagename: student_manage_08,
   },
   {
     title: "신규 수강 등록",
-    summary: "설명쓰세욤",
+    summary: "학생이 수강할 Class를 등록하는 기능입니다.",
     imagename: student_manage_09,
   },
   {
     title: "수강 반 입력",
-    summary: "설명쓰세욤",
+    summary: "수강할 Class 입력",
     imagename: student_manage_10,
   },
   {
     title: "수강 등록하기",
-    summary: "설명쓰세욤",
+    summary: "수강 등록이 되신것을 확인하실수 있습니다.",
     imagename: student_manage_11,
   },
   {
     title: "수강 등록 수정",
-    summary: "설명쓰세욤",
+    summary: "수강신청한 Class를 변경하는 기능입니다.",
     imagename: student_manage_12,
   },
   {
     title: "수정할 수강 반 데이터 입력",
-    summary: "설명쓰세욤",
+    summary: "변경할 데이터 입력하기",
     imagename: student_manage_13,
   },
   {
     title: "수강 등록 수정",
-    summary: "설명쓰세욤",
+    summary: "수강 등록 수정이 되신것을 알수있습니다.",
     imagename: student_manage_14,
   },
   {
     title: "수강 등록 삭제",
-    summary: "설명쓰세욤",
+    summary: "등록한 Class를 삭제할수있는 기능입니다.",
     imagename: student_manage_15,
     alertMessage: "수강 반이 삭제되었습니다.",
   },
   {
     title: "학생 정보 삭제",
-    summary: "설명쓰세욤",
+    summary: "학생정보를 삭제할수있는 기능입니다.",
     imagename: student_manage_16,
     alertMessage: "학생 정보가 삭제되었습니다.",
   },
 ];
 const CourseManage = () => {
   const [mainImage, setMainImage] = useState(student_manage_01);
-  const [mainSummary, setMainSummary] = useState("");
+  const [mainSummary, setMainSummary] = useState(
+    "수강생 관리기능은 학생과 수강반을 등록,삭제,수정기능을 담당하고있습니다."
+  );
   return (
     <div className="coursemanage">
       {/* aside left :: 해당 페이지 정보 이미지로 표기하는 부분 */}

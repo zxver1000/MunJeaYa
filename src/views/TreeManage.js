@@ -20,32 +20,32 @@ import tree_manage_06 from "../assets/treemanage/07-06.PNG";
 const InitButtonData = [
   {
     title: "카테고리 선택하기",
-    summary: "설명 쓰세욤",
+    summary: "원하시는 카테고리를 고르실수 있습니다.",
     imagename: tree_manage_02,
   },
   {
     title: "카테고리 이름 입력",
-    summary: "설명 쓰세욤",
+    summary: "카테고리에 원하시는 이름을 작명하실수 있습니다.",
     imagename: tree_manage_03,
   },
   {
     title: "등록하기",
-    summary: "설명 쓰세욤",
+    summary: "트리에 원하시는 카테고리를 추가하실 수 있습니다",
     imagename: tree_manage_04,
   },
   {
     title: "수정할 데이터 입력",
-    summary: "설명 쓰세욤",
+    summary: "카테고리를 수정하실수 있습니다.",
     imagename: tree_manage_05,
   },
   {
     title: "수정하기",
-    summary: "설명 쓰세욤",
+    summary: "카테고리를 수정하실수 있습니다.",
     imagename: tree_manage_06,
   },
   {
     title: "DB업로드",
-    summary: "설명 쓰세욤",
+    summary: "DB업로드하기",
     imagename: tree_manage_06,
     alertmessage: "DB가 업로드되었습니다",
   },
@@ -53,7 +53,9 @@ const InitButtonData = [
 
 const TreeManage = () => {
   const [mainImage, setMainImage] = useState(tree_manage_01);
-  const [mainSummary, setMainSummary] = useState("");
+  const [mainSummary, setMainSummary] = useState(
+    "트리관리 기능은 원하시는 문제지를 카테고리에따라 구분."
+  );
 
   return (
     <div className="treemanage">

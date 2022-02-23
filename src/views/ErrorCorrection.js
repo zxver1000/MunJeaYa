@@ -48,7 +48,9 @@ const ErrorCorrection = () => {
       {/* aside right :: 해당 페이지의 Flow를 설명하는 부분 + 메인으로 돌아가는 버튼 존재 */}
       <aside className="right">
         <Link to="/main">
-          <FontAwesomeIcon icon={faHouseChimney} size="3x" />
+          <div className="home_image">
+            <FontAwesomeIcon icon={faHouseChimney} size="3x" />
+          </div>
         </Link>
         <section className="buttons">
           아래 버튼을 클릭하면 가운데 실행화면을 볼 수 있습니다.

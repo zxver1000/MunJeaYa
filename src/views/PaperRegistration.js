@@ -65,7 +65,9 @@ const InitButtonData = [
 ];
 const PaperRegistration = () => {
   const [mainImage, setMainImage] = useState(basic);
-  const [mainSummary, setMainSummary] = useState("");
+  const [mainSummary, setMainSummary] = useState(
+    "문제등록기능은 원하시는 문제지들을 프로그램에 등록하실수 있는 기능을담당합니다."
+  );
   return (
     <div className="paperregistration">
       {/* aside left :: 해당 페이지 정보 이미지로 표기하는 부분 */}

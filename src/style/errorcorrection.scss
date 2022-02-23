@@ -50,4 +50,11 @@
 }
 .home_image {
   text-align: center;
+  background: white;
+  color: black;
+  border-radius: 50%;
+  width: 60%;
+}
+.home_image:hover {
+  color: deepskyblue;
 }
