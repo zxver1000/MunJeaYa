@@ -2,10 +2,17 @@ import "../style/coursemanage.scss";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import main_icon12_hover from "../assets/main_icons/main_icon12_hover.png";
-import insert_info from "../assets/basicinformation/12_basicinformation_before.png";
-import modify_info from "../assets/basicinformation/12_basicinformation_after.png";
-import reset_info from "../assets/basicinformation/12_basicinformation_before.png";
+import main_icon5_hover from "../assets/main_icons/main_icon5_hover.png";
+
+import course_manage_01 from "../assets/coursemanage/05-01.png";
+import course_manage_02 from "../assets/coursemanage/05-02.png";
+import course_manage_03 from "../assets/coursemanage/05-03.png";
+import course_manage_04 from "../assets/coursemanage/05-04.png";
+import course_manage_05 from "../assets/coursemanage/05-05.png";
+import course_manage_06 from "../assets/coursemanage/05-06.png";
+import course_manage_07 from "../assets/coursemanage/05-07.png";
+import course_manage_08 from "../assets/coursemanage/05-08.png";
+
 /*
   하단 title, summary, imagename 작성하여 개수만 늘려주면 됨
   title     : 버튼이름
@@ -14,29 +21,49 @@ import reset_info from "../assets/basicinformation/12_basicinformation_before.pn
  */
 const InitButtonData = [
   {
-    title: "회원(학원) 정보 입력",
-    summary: "회원(학원)정보의 회원 정보를 입력할 수 있습니다.",
-    imagename: insert_info,
+    title: "반 만들기",
+    summary: "설명 쓰세욤",
+    imagename: course_manage_02,
   },
   {
-    title: "회원(학원) 정보 수정",
-    summary: "회원(학원)정보의 회원 정보를 수정할 수 있습니다.",
-    imagename: modify_info,
+    title: "반 정보입력",
+    summary: "설명 쓰세욤",
+    imagename: course_manage_03,
   },
   {
-    title: "초기화",
-    summary: "회원(학원)정보의 회원 정보를 초기화 수 있습니다.",
-    imagename: reset_info,
+    title: "반 만들기",
+    summary: "설명 쓰세욤",
+    imagename: course_manage_04,
+  },
+  {
+    title: "반 수정하기",
+    summary: "설명 쓰세욤",
+    imagename: course_manage_05,
+  },
+  {
+    title: "수정 데이터 입력",
+    summary: "설명 쓰세욤",
+    imagename: course_manage_06,
+  },
+  {
+    title: "반 정보 수정하기",
+    summary: "설명 쓰세욤",
+    imagename: course_manage_07,
+  },
+  {
+    title: "반 삭제하기",
+    summary: "설명 쓰세욤",
+    imagename: course_manage_08,
   },
 ];
 const CourseManage = () => {
-  const [mainImage, setMainImage] = useState(reset_info);
+  const [mainImage, setMainImage] = useState(course_manage_01);
   const [mainSummary, setMainSummary] = useState("");
   return (
     <div className="coursemanage">
       {/* aside left :: 해당 페이지 정보 이미지로 표기하는 부분 */}
       <aside className="left">
-        <img className="coursemanage-image left" src={main_icon12_hover} />
+        <img className="coursemanage-image left" src={main_icon5_hover} />
       </aside>
       {/* pagename-main :: 해당 페이지의 주 내용 부분이 담기는 부분 */}
       <div className="coursemanage-main">
@@ -46,7 +73,7 @@ const CourseManage = () => {
       {/* aside right :: 해당 페이지의 Flow를 설명하는 부분 + 메인으로 돌아가는 버튼 존재 */}
       <aside className="right">
         <Link to="/main">
-          <img className="coursemanage-image right" src={main_icon12_hover} />
+          <img className="coursemanage-image right" src={main_icon5_hover} />
         </Link>
         <section className="buttons">
           아래 버튼을 클릭하면 가운데 실행화면을 볼 수 있습니다.
