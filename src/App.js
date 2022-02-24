@@ -1,6 +1,6 @@
 import "./style/App.css";
 import "./style/main.css";
-
+import navlogo from "./assets/nav_logo.png";
 import { Link, Route, BrowserRouter, Switch } from "react-router-dom";
 import {
   Navbar,
@@ -34,49 +34,35 @@ import mainlog from "./assets/main_logo.png";
 import Login_new from "./views/login";
 function 상단바() {
   return (
-    <Navbar bg="light" expand={false}>
-      <Container fluid>
-        <Navbar.Brand href="#" style={{ fontWeight: "bold" }}>
-          Filpplus 구입문의 010-2004-1484
-        </Navbar.Brand>
-
-        <Navbar.Toggle aria-controls="offcanvasNavbar" />
-        <Navbar.Offcanvas
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
-          placement="end"
-        >
-          <Offcanvas.Header closeButton>
-            <Offcanvas.Title id="offcanvasNavbarLabel">
-              Offcanvas
-            </Offcanvas.Title>
-          </Offcanvas.Header>
-          <Offcanvas.Body>
-            <Nav className="justify-content-end flex-grow-1 pe-3">
-              <Nav.Link href="#action1">Home</Nav.Link>
-              <Nav.Link href="#action2">Link</Nav.Link>
-              <NavDropdown title="Dropdown" id="offcanvasNavbarDropdown">
-                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
-                  Something else here
-                </NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
-            <Form className="d-flex">
-              <FormControl
-                type="search"
-                placeholder="Search"
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button variant="outline-success">Search</Button>
-            </Form>
-          </Offcanvas.Body>
-        </Navbar.Offcanvas>
+    <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+      <Container>
+        <Link to="/main">
+          <Navbar.Brand>
+            <img src={navlogo} alt="" style={{ width: "200px" }} />
+          </Navbar.Brand>
+        </Link>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="#features">Features</Nav.Link>
+            <Nav.Link href="#pricing">Pom문제야 사이트</Nav.Link>
+            <NavDropdown title="판매 제품" id="collasible-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">보급형</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">고급형</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+          <Nav>
+            <Nav.Link href="#deets">More deets</Nav.Link>
+            <Nav.Link eventKey={2} href="#memes">
+              Dank memes
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
       </Container>
     </Navbar>
   );
@@ -91,11 +77,12 @@ function App() {
         <Link to="/main">
           <img className="main-background" src={mainlog} />
         </Link>
-        <Route exact path="/">
-          <Logins />
-        </Route>
 
         <Switch>
+          <Route exact path="/">
+            <Logins />
+          </Route>
+
           <Route exact path="/test">
             <Login_new />
           </Route>
@@ -146,7 +133,6 @@ function App() {
           </Route>
         </Switch>
       </div>
-      <FontAwesomeIcon icon="fa-solid fa-house-chimney" size="4x" />
     </div>
   );
 }
