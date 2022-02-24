@@ -31,23 +31,3 @@
     }
   }
 }
-.right {
-  .buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .button {
-      width: 100%;
-      margin: 0.125em 0em;
-      padding: 0.25em 1.5em;
-      font-weight: bold;
-      background-color: white;
-      color: rgb(27, 20, 100);
-      border: 1px solid black;
-      .button-value {
-        display: flex;
-      }
-    }
-  }
-}
