@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-flip/static/css/main.2e8922a3.css",
-    "main.js": "/react-flip/static/js/main.e4e520a1.js",
+    "main.js": "/react-flip/static/js/main.78f03989.js",
     "static/js/787.a13aa905.chunk.js": "/react-flip/static/js/787.a13aa905.chunk.js",
     "static/media/09-10.png": "/react-flip/static/media/09-10.a52d234e60d8c63f8752.png",
     "static/media/09-11.png": "/react-flip/static/media/09-11.e4e8b5c26f1d507bc588.png",
@@ -64,6 +64,7 @@
     "static/media/9-08.png": "/react-flip/static/media/9-08.50f28334b2259a947888.png",
     "static/media/07-02.PNG": "/react-flip/static/media/07-02.a8c809571a365fb1f42a.PNG",
     "static/media/05-05.png": "/react-flip/static/media/05-05.ea92a49fb5105bf32cc4.png",
+    "static/media/main_logo.png": "/react-flip/static/media/main_logo.d2c268c32ee4e1dd390d.png",
     "static/media/05-06.png": "/react-flip/static/media/05-06.50c462934e096656995c.png",
     "static/media/08-10.png": "/react-flip/static/media/08-10.6186ac4b22364d93f63e.png",
     "static/media/05-03.png": "/react-flip/static/media/05-03.ef01577c12f9e01ed3c2.png",
@@ -75,7 +76,6 @@
     "static/media/05-08.png": "/react-flip/static/media/05-08.90b9657670eb9c054958.png",
     "static/media/07-01.PNG": "/react-flip/static/media/07-01.84e05de959294737731e.PNG",
     "static/media/login_image.png": "/react-flip/static/media/login_image.d57f2900ee2bd6afd1dc.png",
-    "static/media/main_logo.png": "/react-flip/static/media/main_logo.cace2b28c2d6fa2a12d9.png",
     "static/media/08-08.png": "/react-flip/static/media/08-08.546dd49fe75e09493520.png",
     "static/media/08-07.png": "/react-flip/static/media/08-07.77740040b30c1b847297.png",
     "static/media/08-13.png": "/react-flip/static/media/08-13.df9b7a84801c9e0296c4.png",
@@ -83,23 +83,23 @@
     "static/media/08-12.png": "/react-flip/static/media/08-12.c455ed730afa166b19ae.png",
     "static/media/08-03.png": "/react-flip/static/media/08-03.6d28b3c2c70fbaf3d151.png",
     "static/media/08-02.png": "/react-flip/static/media/08-02.49518d12e289ca56e0cc.png",
-    "static/media/nav_logo.png": "/react-flip/static/media/nav_logo.cd497a092aedaa018669.png",
     "static/media/08-14.png": "/react-flip/static/media/08-14.3dcdee57054afd867ad8.png",
     "static/media/08-06.png": "/react-flip/static/media/08-06.85b8eafed81cf5172d78.png",
     "static/media/08-09.png": "/react-flip/static/media/08-09.85b8eafed81cf5172d78.png",
     "static/media/08-11.png": "/react-flip/static/media/08-11.85b8eafed81cf5172d78.png",
     "static/media/08-15.png": "/react-flip/static/media/08-15.47e490b89f0adf209727.png",
     "static/media/08-01.png": "/react-flip/static/media/08-01.69df4be75cd2e030b5fb.png",
+    "static/media/nav_logo.png": "/react-flip/static/media/nav_logo.1f98c8089727e221b540.png",
     "static/media/main_icon10.png": "/react-flip/static/media/main_icon10.03e750ff69f6aaa5b1ec.png",
     "static/media/main_icon10_hover.png": "/react-flip/static/media/main_icon10_hover.09c32bdba77e15cf28b0.png",
     "static/media/goMain.png": "/react-flip/static/media/goMain.2986568c03f01bec9eed.png",
     "index.html": "/react-flip/index.html",
     "main.2e8922a3.css.map": "/react-flip/static/css/main.2e8922a3.css.map",
-    "main.e4e520a1.js.map": "/react-flip/static/js/main.e4e520a1.js.map",
+    "main.78f03989.js.map": "/react-flip/static/js/main.78f03989.js.map",
     "787.a13aa905.chunk.js.map": "/react-flip/static/js/787.a13aa905.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2e8922a3.css",
-    "static/js/main.e4e520a1.js"
+    "static/js/main.78f03989.js"
   ]
 }
