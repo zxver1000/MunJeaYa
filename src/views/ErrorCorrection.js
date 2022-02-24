@@ -2,13 +2,19 @@ import "../style/errorcorrection.scss";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHouseChimney } from "@fortawesome/free-solid-svg-icons";
-import main_icon12_hover from "../assets/main_icons/main_icon12_hover.png";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faHouseChimney } from "@fortawesome/free-solid-svg-icons";
+import main_icon10_hover from "../assets/main_icons/main_icon10_hover.png";
 import go_main from "../assets/goMain.png";
-import insert_info from "../assets/basicinformation/12_basicinformation_before.png";
-import modify_info from "../assets/basicinformation/12_basicinformation_after.png";
-import reset_info from "../assets/basicinformation/12_basicinformation_before.png";
+
+import error_correction_01 from "../assets/errorcorrection/10-01.png";
+import error_correction_02 from "../assets/errorcorrection/10-02.png";
+import error_correction_03 from "../assets/errorcorrection/10-03.png";
+import error_correction_04 from "../assets/errorcorrection/10-04.png";
+import error_correction_05 from "../assets/errorcorrection/10-05.png";
+import error_correction_06 from "../assets/errorcorrection/10-06.png";
+import error_correction_07 from "../assets/errorcorrection/10-07.png";
+
 /*
   하단 title, summary, imagename 작성하여 개수만 늘려주면 됨
   title     : 버튼이름
@@ -17,29 +23,58 @@ import reset_info from "../assets/basicinformation/12_basicinformation_before.pn
  */
 const InitButtonData = [
   {
-    title: "회원(학원) 정보 입력",
-    summary: "회원(학원)정보의 회원 정보를 입력할 수 있습니다.",
-    imagename: insert_info,
+    title: "문제지 선택",
+    summary: "설명 적어주세욤",
+    imagename: error_correction_02,
   },
   {
-    title: "회원(학원) 정보 수정",
-    summary: "회원(학원)정보의 회원 정보를 수정할 수 있습니다.",
-    imagename: modify_info,
+    title: "오류 문제 확인",
+    summary: "설명 적어주세욤",
+    imagename: error_correction_03,
   },
   {
-    title: "초기화",
-    summary: "회원(학원)정보의 회원 정보를 초기화 수 있습니다.",
-    imagename: reset_info,
+    title: "유형 문제 확인",
+    summary: "설명 적어주세욤",
+    imagename: error_correction_04,
+  },
+  {
+    title: "수정할 문제 데이터 입력",
+    summary: "설명 적어주세욤",
+    imagename: error_correction_05,
+  },
+  {
+    title: "수정 업로드",
+    summary: "설명 적어주세욤",
+    imagename: error_correction_05,
+    alertMessage: "문제가 수정되었습니다.",
+  },
+  {
+    title: "문제 삭제",
+    summary: "설명 적어주세욤",
+    imagename: error_correction_06,
+    alertMessage: "문제가 삭제되었습니다.",
+  },
+  {
+    title: "중복 문제 확인",
+    summary: "설명 적어주세욤",
+    imagename: error_correction_07,
+  },
+  {
+    title: "중복 문제 확인 완료",
+    summary: "설명 적어주세욤",
+    imagename: error_correction_07,
+    alertMessage: "중복 문제가 삭제되었습니다.",
   },
 ];
+
 const ErrorCorrection = () => {
-  const [mainImage, setMainImage] = useState(reset_info);
+  const [mainImage, setMainImage] = useState(error_correction_01);
   const [mainSummary, setMainSummary] = useState("");
   return (
     <div className="errorcorrection">
       {/* aside left :: 해당 페이지 정보 이미지로 표기하는 부분 */}
       <aside className="left">
-        <img className="errorcorrection-image left" src={main_icon12_hover} />
+        <img className="errorcorrection-image left" src={main_icon10_hover} />
       </aside>
       {/* pagename-main :: 해당 페이지의 주 내용 부분이 담기는 부분 */}
       <div className="errorcorrection-main">
@@ -59,6 +94,7 @@ const ErrorCorrection = () => {
                 className="button"
                 key={"button" + index}
                 onClick={() => {
+                  if (item.alertMessage != null) alert(item.alertMessage);
                   setMainImage(item.imagename);
                   setMainSummary(item.summary);
                 }}
