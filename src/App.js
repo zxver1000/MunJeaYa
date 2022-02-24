@@ -16,6 +16,7 @@ import {
   Col,
 } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import Main from "./views/main";
 import Logins from "./views/login";
 import StudentManage from "./views/StudentManage";
@@ -38,28 +39,28 @@ function 상단바() {
       <Container>
         <Link to="/main">
           <Navbar.Brand>
-            <img src={navlogo} alt="" style={{ width: "200px" }} />
+            <img src={navlogo} alt="" style={{ width: "80px" }} />
           </Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pom문제야 사이트</Nav.Link>
-            <NavDropdown title="판매 제품" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">보급형</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">고급형</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+            <Nav.Link style={{ fontWeight: "bold" }}>㈜TalkingMath</Nav.Link>
+
+            <NavDropdown
+              title="판매 제품"
+              id="collasible-nav-dropdown"
+              style={{ fontWeight: "bold" }}
+            >
+              <NavDropdown.Item>보급형</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
+              <NavDropdown.Item>고급형</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
+            <Nav.Link style={{ fontWeight: "bold" }}>
+              <FontAwesomeIcon icon={faPhone}></FontAwesomeIcon>
+              구매문의 010-2004-1484
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
