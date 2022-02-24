@@ -31,30 +31,3 @@
     }
   }
 }
-.right {
-  .buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .button {
-      width: 100%;
-      margin: 0.125em 0em;
-      padding: 0.25em 1.5em;
-      font-weight: bold;
-      .button-value {
-        display: flex;
-      }
-    }
-  }
-}
-.home_image {
-  text-align: center;
-  background: white;
-  color: black;
-  border-radius: 50%;
-  width: 60%;
-}
-.home_image:hover {
-  color: deepskyblue;
-}
