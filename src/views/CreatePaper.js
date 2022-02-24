@@ -128,7 +128,7 @@ const InitButtonDataSecond = [
     imagename: quest_select_answer,
   },
   {
-    title: "랜덤 문제 정렬",
+    title: "시험지 저장 및 배포",
     summary: "입력",
     imagename: new_main_image,
     message: "시험지가 저장, 학생들에게 배포되었습니다.",
@@ -152,7 +152,7 @@ const CreatePaper = () => {
               setMainImage(main_image);
             }}
           >
-            <div className="button-value">(1) 시험지 만들기 보기</div>
+            <div className="button-value">(1) 시험지 만들기 설정</div>
           </button>
           <button
             className="button"
@@ -161,7 +161,7 @@ const CreatePaper = () => {
               setMainImage(new_main_image);
             }}
           >
-            <div className="button-value">(2) 시험지 설정 보기</div>
+            <div className="button-value">(2) 새로운 시험지 만들기</div>
           </button>
         </section>
       </aside>
