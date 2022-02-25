@@ -2,7 +2,7 @@ import "../style/incorrectmanage.scss";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import main_icon12_hover from "../assets/main_icons/main_icon12_hover.png";
+import main_icon12_hover from "../assets/main_icons/main_icon3_hover.png";
 import go_main from "../assets/goMain.png";
 
 import basic_main from "../assets/incorrectmanage/3-01.png";
@@ -112,6 +112,7 @@ const InitButtonDataThird = [
     title: "오답유사 시험지 만들기",
     summary: "",
     imagename: test_wrong_similar_done,
+    message: "오답유사 시험지가 완성되었습니다.",
   },
 ];
 const InitButtonDataFourth = [
@@ -134,6 +135,7 @@ const InitButtonDataFourth = [
     title: "출제문제 제외 시험지 만들기",
     summary: "",
     imagename: test_except_done,
+    message: "출제문제 제외 시험지가 완성되었습니다.",
   },
 ];
 const InitButtonDataFifth = [

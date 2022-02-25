@@ -2,7 +2,7 @@ import "../style/createpaper.scss";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import main_icon12_hover from "../assets/main_icons/main_icon12_hover.png";
+import main_icon12_hover from "../assets/main_icons/main_icon1_hover.png";
 import function_list from "../assets/function_list.png";
 import main_image from "../assets/createpaper/01-01.png";
 import category_select from "../assets/createpaper/01-02.png";
