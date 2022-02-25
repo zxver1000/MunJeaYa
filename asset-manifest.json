@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-flip/static/css/main.93ef48e4.css",
-    "main.js": "/react-flip/static/js/main.5604bf88.js",
+    "main.css": "/react-flip/static/css/main.c6943d8c.css",
+    "main.js": "/react-flip/static/js/main.c8e40a2d.js",
     "static/js/787.a13aa905.chunk.js": "/react-flip/static/js/787.a13aa905.chunk.js",
     "static/media/09-10.png": "/react-flip/static/media/09-10.a52d234e60d8c63f8752.png",
     "static/media/09-11.png": "/react-flip/static/media/09-11.e4e8b5c26f1d507bc588.png",
@@ -149,12 +149,12 @@
     "static/media/main_icon10_hover.png": "/react-flip/static/media/main_icon10_hover.09c32bdba77e15cf28b0.png",
     "static/media/goMain.png": "/react-flip/static/media/goMain.2986568c03f01bec9eed.png",
     "index.html": "/react-flip/index.html",
-    "main.93ef48e4.css.map": "/react-flip/static/css/main.93ef48e4.css.map",
-    "main.5604bf88.js.map": "/react-flip/static/js/main.5604bf88.js.map",
+    "main.c6943d8c.css.map": "/react-flip/static/css/main.c6943d8c.css.map",
+    "main.c8e40a2d.js.map": "/react-flip/static/js/main.c8e40a2d.js.map",
     "787.a13aa905.chunk.js.map": "/react-flip/static/js/787.a13aa905.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.93ef48e4.css",
-    "static/js/main.5604bf88.js"
+    "static/css/main.c6943d8c.css",
+    "static/js/main.c8e40a2d.js"
   ]
 }
