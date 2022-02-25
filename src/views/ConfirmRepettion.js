@@ -40,7 +40,7 @@ const ConfirmRepetition = () => {
         <img className="confirmrepetition-image left" src={main_icon12_hover} />
       </aside>
       {/* pagename-main :: 해당 페이지의 주 내용 부분이 담기는 부분 */}
-      <div className="confirmrepetition-main">
+      <div className="confirmrepetition-main description">
         <img className="image" src={mainImage} />
         <article className="summary">{mainSummary}</article>
       </div>

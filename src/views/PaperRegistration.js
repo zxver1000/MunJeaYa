@@ -114,7 +114,7 @@ const PaperRegistration = () => {
         </section>
       </aside>
       {/* pagename-main :: 해당 페이지의 주 내용 부분이 담기는 부분 */}
-      <div className="paperregistration-main">
+      <div className="paperregistration-main description">
         <img className="image" src={mainImage} />
         <article className="summary">{mainSummary}</article>
       </div>

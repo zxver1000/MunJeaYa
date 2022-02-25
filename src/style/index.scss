@@ -33,3 +33,14 @@ code {
     }
   }
 }
+
+.right {
+  text-align: center;
+  .right {
+    padding: 0.125em;
+    color: rgb(27, 20, 100);
+    background-color: rgb(159, 169, 216);
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+}

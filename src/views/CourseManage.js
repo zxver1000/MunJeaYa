@@ -66,7 +66,7 @@ const CourseManage = () => {
         <img className="coursemanage-image left" src={main_icon5_hover} />
       </aside>
       {/* pagename-main :: 해당 페이지의 주 내용 부분이 담기는 부분 */}
-      <div className="coursemanage-main">
+      <div className="coursemanage-mai description">
         <img className="image" src={mainImage} />
         <article className="summary">{mainSummary}</article>
       </div>

@@ -40,7 +40,7 @@ const BasicInformation = () => {
         <img className="basicinformation-image left" src={main_icon12_hover} />
       </aside>
       {/* pagename-main :: 해당 페이지의 주 내용 부분이 담기는 부분 */}
-      <div className="basicinformation-main">
+      <div className="basicinformation-main description">
         <img className="image" src={mainImage} />
         <article className="summary">{mainSummary}</article>
       </div>

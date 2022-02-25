@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import main_icon12_hover from "../assets/main_icons/main_icon12_hover.png";
-import go_main from "../assets/goMain.png";
+import function_list from "../assets/function_list.png";
 import main_image from "../assets/createpaper/01-01.png";
 import category_select from "../assets/createpaper/01-02.png";
 import data_set from "../assets/createpaper/01-03.png";
@@ -18,7 +18,7 @@ import new_main_image from "../assets/createpaper/01-10.png";
 import quest_2 from "../assets/createpaper/01-11.png";
 import quest_4 from "../assets/createpaper/01-12.png";
 import quest_6 from "../assets/createpaper/01-13.png";
-
+import naegi_button from "../assets/createpaper/01-14.png";
 import quest_easy from "../assets/createpaper/01-15.png";
 import quest_difficult from "../assets/createpaper/01-16.png";
 import quest_type from "../assets/createpaper/01-17.png";
@@ -92,9 +92,9 @@ const InitButtonDataSecond = [
     imagename: quest_6,
   },
   {
-    title: "8문제 씩 출제",
+    title: "내지 선택",
     summary: "입력",
-    imagename: "",
+    imagename: naegi_button,
   },
   {
     title: "쉬운 순 문제 정렬",
@@ -166,15 +166,13 @@ const CreatePaper = () => {
         </section>
       </aside>
       {/* pagename-main :: 해당 페이지의 주 내용 부분이 담기는 부분 */}
-      <div className="createpaper-main">
+      <div className="createpaper-main description">
         <img className="image" src={mainImage} />
         <article className="summary">{mainSummary}</article>
       </div>
       {/* aside right :: 해당 페이지의 Flow를 설명하는 부분 + 메인으로 돌아가는 버튼 존재 */}
       <aside className="right">
-        <Link to="/main">
-          <img className="createpaper-image right" src={go_main} />
-        </Link>
+        <div className="right">기능 리스트</div>
         <section className="buttons">
           아래 버튼을 클릭하면 가운데 실행화면을 볼 수 있습니다.
           {buttonType == false
