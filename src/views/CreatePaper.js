@@ -35,101 +35,107 @@ import quest_select_answer from "../assets/createpaper/01-20.png";
 const InitButtonDataFirst = [
   {
     title: "카테고리 선택",
-    summary: "입력",
+    summary: "원하시는 카테고리를 선택하실수 있습니다.",
     imagename: category_select,
   },
   {
     title: "SET",
-    summary: "입력",
+    summary: "학원 및 학생 분류에 맞게 문제 출제 설정",
     imagename: data_set,
   },
   {
     title: "데이터 변경",
-    summary: "입력",
+    summary: "유형 또는 출제 범위 카테고리 선택 후 문항 수 설정",
     imagename: data_change,
   },
   {
     title: "시험지 만들기 설정",
-    summary: "입력",
+    summary: "",
     imagename: data_set_complate,
     message: "시험지 설정이 완료되었습니다.",
   },
   {
     title: "시험지명 입력",
-    summary: "입력",
+    summary: "시험지 이름을 자유롭게 설정하실수있습니다.",
     imagename: test_name,
   },
   {
     title: "난이도별 출제",
-    summary: "입력",
+    summary: "유형 또는 출제 범위 카테고리 선택 후 문항 수 설정",
     imagename: difficulty_level,
   },
   {
     title: "유형별 출제",
-    summary: "입력",
+    summary: "유형을 카테고리에서 선택 후 문항 수 설정",
     imagename: test_type,
   },
   {
     title: "문제 선택 출제",
-    summary: "입력",
+    summary: [
+      "카테고리 유형을 더블클릭하면 문제 선택",
+      <br />,
+      "문제 선택 순서대로 저장되므로 교재 작업 시 교재연동 시킬 시 유용",
+      <br />,
+      "윈도우와 한글의 충돌로 튕김 현상이 발생할 수 있습니다.",
+    ],
     imagename: test_select,
   },
 ];
 const InitButtonDataSecond = [
   {
     title: "2문제 씩 출제",
-    summary: "입력",
+    summary: "시험지 한페이지에 2문제씩 출제하도록 변경합니다",
     imagename: quest_2,
   },
   {
     title: "4문제 씩 출제",
-    summary: "입력",
+    summary: "시험지 한페이지에 4문제씩 출제하도록 변경합니다",
     imagename: quest_4,
   },
   {
     title: "6문제 씩 출제",
-    summary: "입력",
+    summary: "시험지 한페이지에 6문제씩 출제하도록 변경합니다",
     imagename: quest_6,
   },
   {
     title: "내지 선택",
-    summary: "입력",
+    summary: "시험지 내지를 변경하실수 있습니다",
     imagename: naegi_button,
   },
   {
     title: "쉬운 순 문제 정렬",
-    summary: "입력",
+    summary: "난이도가 쉬운순으로 문제를 정렬합니다.",
     imagename: quest_easy,
   },
   {
     title: "어려운 순 문제 정렬",
-    summary: "입력",
+    summary: "난이도가 어려운순으로 문제를 정렬합니다.",
     imagename: quest_difficult,
   },
   {
     title: "유형 순 문제 정렬",
-    summary: "입력",
+    summary: "유형순으로 문제를 정렬합니다.",
     imagename: quest_type,
   },
   {
     title: "랜덤 문제 정렬",
-    summary: "입력",
+    summary: "난이도상관없이 랜덤으로 문제를 출시합니다",
     imagename: quest_random,
   },
 
   {
     title: "주관식 우선 출제",
-    summary: "입력",
+    summary: "주관식문제를 우선적으로 출제합니다.",
     imagename: quest_short_answer,
   },
   {
     title: "객관식 우선 출제",
-    summary: "입력",
+    summary: "객관식문제를 우선적으로 출제합니다.",
     imagename: quest_select_answer,
   },
   {
     title: "시험지 저장 및 배포",
-    summary: "입력",
+    summary: "",
     imagename: new_main_image,
     message: "시험지가 저장, 학생들에게 배포되었습니다.",
   },
@@ -137,7 +143,11 @@ const InitButtonDataSecond = [
 const CreatePaper = () => {
   const [buttonType, setButtonType] = useState(false);
   const [mainImage, setMainImage] = useState(main_image);
-  const [mainSummary, setMainSummary] = useState("");
+  const [mainSummary, setMainSummary] = useState([
+    "안전한 구현을 위해서 시험지 1개에 200문항으로 제한",
+    <br />,
+    "책 만들기에서는 제한 없이 적용",
+  ]);
   return (
     <div className="createpaper">
       {/* aside left :: 해당 페이지 정보 이미지로 표기하는 부분 */}
@@ -159,6 +169,21 @@ const CreatePaper = () => {
             onClick={() => {
               setButtonType(true);
               setMainImage(new_main_image);
+              setMainSummary([
+                "시험지 출제 양식 설정창입니다.",
+                <br />,
+                "시험지 저장 및 배포 시 저장 된 시험지들은 자동으로 QUIZ-PAPER폴더로 한글파일로 저장",
+                <br />,
+                "PDF파일로 저장을 원하시면 아이콘 클릭",
+                <br />,
+                "내지는 취향에 맞춰서 선택 사용하고 변경됩니다. [변경이나 추가를 원하시면 별도 문의]",
+                <br />,
+                "유사문항 : 카테고리 내 다른 문항 검색 변경",
+                <br />,
+                "오류신고 : 입력 후 문제수정 메뉴 접속하면 정보 알림 기능",
+                <br />,
+                "매쓰키 : 문제 핵심 키워드 작성 위한 배치",
+              ]);
             }}
           >
             <div className="button-value">(2) 새로운 시험지 만들기</div>

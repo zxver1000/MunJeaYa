@@ -104,7 +104,13 @@ const InitButtonData = [
 ];
 const CreateBook = () => {
   const [mainImage, setMainImage] = useState(create_book_01);
-  const [mainSummary, setMainSummary] = useState("");
+  const [mainSummary, setMainSummary] = useState([
+    "문제집 제작 자료는 먼저 시험지 만들기에서 교재 스타일에 맞게 시험지를 제작",
+    <br />,
+    "목록에서 시험지 순서를 결정해서 책으로 제작되므로 교재용 시험지 파일은 별도 구분",
+    <br />,
+    "시험지별 QR이 생성되어 배부가 가능하므로 학생별 오답 관리 가능",
+  ]);
   return (
     <div className="createbook">
       {/* aside left :: 해당 페이지 정보 이미지로 표기하는 부분 */}

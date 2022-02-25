@@ -32,7 +32,9 @@ const InitButtonData = [
 ];
 const BasicInformation = () => {
   const [mainImage, setMainImage] = useState(reset_info);
-  const [mainSummary, setMainSummary] = useState("");
+  const [mainSummary, setMainSummary] = useState(
+    "로고 파일은 사전 전달되면 최적화 후 입력"
+  );
   return (
     <div className="basicinformation">
       {/* aside left :: 해당 페이지 정보 이미지로 표기하는 부분 */}

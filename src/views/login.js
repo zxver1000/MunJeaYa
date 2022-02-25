@@ -60,6 +60,7 @@ const Login_new = () => {
         </section>
         <section className="bottom">
           <button>문제야 신규 회원가입</button>
+          <p>아이디 정보 설정 완료하여 출고됩니다.</p>
           <div className="login-checkbox">
             <input type="checkbox" />
             <label>아이디 저장</label>

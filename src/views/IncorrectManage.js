@@ -223,7 +223,13 @@ const buttonData = [
 const IncorrectManage = () => {
   const [buttonType, setButtonType] = useState(0);
   const [mainImage, setMainImage] = useState(basic_main);
-  const [mainSummary, setMainSummary] = useState("");
+  const [mainSummary, setMainSummary] = useState([
+    "채점하기 : 학생에게 배부된 시험지 채점을 수동으로 수정 및 입력 가능",
+    <br />,
+    "학생 개별 생성 관리되며, 시험지 묶어서 출력 및 배부는 나의 시험지에서 일괄 선택",
+    <br />,
+    "자동으로 틀린 문제 시험지는 저장 되지 않고, 온라인 학생이 입력 시 자동 저장 되어 확인하실수있습니다.",
+  ]);
   return (
     <div className="incorrectmanage">
       {/* aside left :: 해당 페이지 정보 이미지로 표기하는 부분 */}

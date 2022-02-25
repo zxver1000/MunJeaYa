@@ -60,7 +60,7 @@ const InitButtonData = [
 const TreeManage = () => {
   const [mainImage, setMainImage] = useState(tree_manage_01);
   const [mainSummary, setMainSummary] = useState(
-    "트리관리 기능은 원하시는 문제지를 카테고리에따라 구분."
+    "트리는 기본 토킹매쓰로 전학년 수학 대 / 중단원으로 기본 설정하여 배부."
   );
 
   return (

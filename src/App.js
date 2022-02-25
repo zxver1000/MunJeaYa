@@ -89,6 +89,8 @@ function App() {
           </Route>
 
           <Route exact path="/main">
+            <h3 className="main_text">확인하시고자 하는 기능 클릭하세요</h3>
+
             <Main />
           </Route>
 
