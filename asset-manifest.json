@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-flip/static/css/main.93ef48e4.css",
-    "main.js": "/react-flip/static/js/main.8dbf8067.js",
+    "main.js": "/react-flip/static/js/main.5604bf88.js",
     "static/js/787.a13aa905.chunk.js": "/react-flip/static/js/787.a13aa905.chunk.js",
     "static/media/09-10.png": "/react-flip/static/media/09-10.a52d234e60d8c63f8752.png",
     "static/media/09-11.png": "/react-flip/static/media/09-11.e4e8b5c26f1d507bc588.png",
@@ -70,6 +70,7 @@
     "static/media/3-19.png": "/react-flip/static/media/3-19.15e80107897c3363c8d5.png",
     "static/media/10-02.png": "/react-flip/static/media/10-02.772f1b5b30c617347c21.png",
     "static/media/06-01.png": "/react-flip/static/media/06-01.f1a59176c23056804df8.png",
+    "static/media/07-07.png": "/react-flip/static/media/07-07.a061ac21095c25b634fa.png",
     "static/media/3-21.png": "/react-flip/static/media/3-21.431111432ff6eaa5328d.png",
     "static/media/08-04.png": "/react-flip/static/media/08-04.8e99f5665c9d5ccc2f55.png",
     "static/media/9-06.png": "/react-flip/static/media/9-06.d3fe25c3a9384a512b0d.png",
@@ -149,11 +150,11 @@
     "static/media/goMain.png": "/react-flip/static/media/goMain.2986568c03f01bec9eed.png",
     "index.html": "/react-flip/index.html",
     "main.93ef48e4.css.map": "/react-flip/static/css/main.93ef48e4.css.map",
-    "main.8dbf8067.js.map": "/react-flip/static/js/main.8dbf8067.js.map",
+    "main.5604bf88.js.map": "/react-flip/static/js/main.5604bf88.js.map",
     "787.a13aa905.chunk.js.map": "/react-flip/static/js/787.a13aa905.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.93ef48e4.css",
-    "static/js/main.8dbf8067.js"
+    "static/js/main.5604bf88.js"
   ]
 }
