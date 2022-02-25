@@ -10,7 +10,7 @@ import tree_manage_03 from "../assets/treemanage/07-03.PNG";
 import tree_manage_04 from "../assets/treemanage/07-04.PNG";
 import tree_manage_05 from "../assets/treemanage/07-05.PNG";
 import tree_manage_06 from "../assets/treemanage/07-06.PNG";
-
+import tree_manage_07 from "../assets/treemanage/07-07.png";
 /*
   하단 title, summary, imagename 작성하여 개수만 늘려주면 됨
   title     : 버튼이름
@@ -48,6 +48,12 @@ const InitButtonData = [
     summary: "DB업로드하기",
     imagename: tree_manage_06,
     alertmessage: "DB가 업로드되었습니다",
+  },
+  {
+    title: "카테고리삭제하기",
+    summary: "카테고리삭제",
+    imagename: tree_manage_07,
+    alertmessage: "카테고리가 삭제되었습니다.",
   },
 ];
 

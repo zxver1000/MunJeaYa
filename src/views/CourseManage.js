@@ -31,7 +31,7 @@ const InitButtonData = [
     imagename: course_manage_03,
   },
   {
-    title: "반 만들기",
+    title: "새로운 반 생성",
     summary: "설명 쓰세욤",
     imagename: course_manage_04,
   },
@@ -54,6 +54,7 @@ const InitButtonData = [
     title: "반 삭제하기",
     summary: "설명 쓰세욤",
     imagename: course_manage_08,
+    alertMessage: "반이 삭제되었습니다",
   },
 ];
 const CourseManage = () => {
@@ -83,6 +84,7 @@ const CourseManage = () => {
                 onClick={() => {
                   setMainImage(item.imagename);
                   setMainSummary(item.summary);
+                  if (item.alertMessage != null) alert(item.alertMessage);
                 }}
               >
                 <div className="button-value">{item.title}</div>
