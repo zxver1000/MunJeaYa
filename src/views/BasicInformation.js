@@ -46,9 +46,10 @@ const BasicInformation = () => {
       </div>
       {/* aside right :: 해당 페이지의 Flow를 설명하는 부분 + 메인으로 돌아가는 버튼 존재 */}
       <aside className="right">
-        <Link to="/main">
+        {/* <Link to="/main">
           <img className="basicinformation-image right" src={go_main} />
-        </Link>
+        </Link> */}
+        <div className="right">기능 리스트</div>
         <section className="buttons">
           아래 버튼을 클릭하면 가운데 실행화면을 볼 수 있습니다.
           {InitButtonData.map((item, index) => {
