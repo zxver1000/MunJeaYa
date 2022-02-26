@@ -27,7 +27,7 @@ const Login_new = () => {
     <div className="login-box">
       <header>
         <h3>선생님의 능력을 업그레이드 시켜드립니다 !</h3>
-        <h3>체험 및 기능 연습을 위한 홈페이지 입니다.</h3>
+
         <h3>Login을 클릭하시면 시작됩니다!</h3>
       </header>
       <section className="login-main">

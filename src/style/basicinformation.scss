@@ -1,8 +1,11 @@
+@import url(https://fonts.googleapis.com/css?family=Nanum+Gothic);
+
 .basicinformation {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  font-family: "Nanum Gothic", sans-serif;
 
   width: 100%;
   aside {
@@ -10,9 +13,21 @@
     .basicinformation-image {
       width: 100%;
     }
+
     &.left {
     }
     &.right {
+    }
+  }
+
+  .buttons {
+    .button {
+      font-family: "Nanum Gothic", sans-serif;
+
+      color: black;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     }
   }
   .basicinformation-main {

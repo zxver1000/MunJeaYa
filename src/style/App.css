@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "NanumGothic";
+  src: url(../font/NanumGothic-ExtraBold.ttf);
+}
 .App {
   text-align: center;
 }
@@ -18,6 +22,7 @@
   height: 130vh;
   background-color: rgba(192, 192, 192, 0.438);
   overflow: auto;
+  font-family: "NanumGothic";
 }
 .row {
   margin-top: 20px;
@@ -64,6 +69,7 @@ a {
 
 .main_text {
   text-align: center;
+  color: black;
   width: 100%;
   margin: 20px;
 }

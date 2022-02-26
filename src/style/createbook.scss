@@ -15,6 +15,13 @@
     &.right {
     }
   }
+  .buttons {
+    .button {
+      color: black;
+      border-radius: 10px;
+      text-align: center;
+    }
+  }
   .createbook-main {
     display: flex;
     flex-direction: column;

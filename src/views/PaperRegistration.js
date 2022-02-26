@@ -89,6 +89,46 @@ const PaperRegistration = () => {
   const [mainSummary, setMainSummary] = useState(
     "문제등록기능은 원하시는 문제지들을 프로그램에 등록하실수 있는 기능을담당합니다."
   );
+  let [왼쪽버튼눌림, 왼쪽버튼눌림변경] = useState(false);
+  function 오른쪽버튼색변경(idx, total, button_num) {
+    let 누른거 = InitButtonDataSecond[idx].title;
+    누른거 = document.getElementById(누른거);
+    왼쪽버튼눌림변경(false);
+    누른거.style.backgroundColor = "gainsboro";
+    for (let i = 0; i < total; i++) {
+      if (i == idx) {
+        continue;
+      }
+      let 누른거 = document.getElementById(InitButtonDataSecond[i].title);
+      누른거.style.backgroundColor = "white";
+    }
+  }
+
+  function 왼쪽버튼색변경(idx, total) {
+    let 누른거 = InitButtonDataFirst[idx].title;
+    누른거 = document.getElementById(누른거);
+    왼쪽버튼눌림변경(true);
+    누른거.style.backgroundColor = "gainsboro";
+    for (let i = 0; i < total; i++) {
+      if (i == idx) {
+        continue;
+      }
+      let 누른거 = document.getElementById(InitButtonDataFirst[i].title);
+      누른거.style.backgroundColor = "white";
+    }
+  }
+  function 오른쪽버튼색끄기(total) {
+    for (let i = 0; i < total; i++) {
+      let 누른거 = document.getElementById(InitButtonDataSecond[i].title);
+      누른거.style.backgroundColor = "white";
+    }
+  }
+  function 왼쪽버튼색끄기(total) {
+    for (let i = 0; i < total; i++) {
+      let 누른거 = document.getElementById(InitButtonDataFirst[i].title);
+      누른거.style.backgroundColor = "white";
+    }
+  }
   return (
     <div className="paperregistration">
       {/* aside left :: 해당 페이지 정보 이미지로 표기하는 부분 */}
@@ -99,11 +139,14 @@ const PaperRegistration = () => {
           {InitButtonDataFirst.map((item, index) => {
             return (
               <button
+                id={InitButtonDataFirst[index].title}
                 className="button"
                 key={"button" + index}
                 onClick={() => {
                   setMainImage(item.imagename);
                   setMainSummary(item.summary);
+                  왼쪽버튼색변경(index, InitButtonDataFirst.length);
+                  오른쪽버튼색끄기(InitButtonDataSecond.length);
                   if (item.message != null) alert(item.message);
                 }}
               >
@@ -126,11 +169,16 @@ const PaperRegistration = () => {
           {InitButtonDataSecond.map((item, index) => {
             return (
               <button
+                id={InitButtonDataSecond[index].title}
                 className="button"
                 key={"button" + index}
                 onClick={() => {
                   setMainImage(item.imagename);
                   setMainSummary(item.summary);
+
+                  오른쪽버튼색변경(index, InitButtonDataSecond.length, 0);
+                  왼쪽버튼색끄기(InitButtonDataFirst.length);
+
                   if (item.message != null) alert(item.message);
                 }}
               >

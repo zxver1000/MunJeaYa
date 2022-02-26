@@ -15,6 +15,13 @@
     &.right {
     }
   }
+  .buttons {
+    .button {
+      color: black;
+      border-radius: 10px;
+      text-align: center;
+    }
+  }
   .incorrectmanage-main {
     display: flex;
     flex-direction: column;

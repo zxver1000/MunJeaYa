@@ -30,74 +30,74 @@ import create_book_15 from "../assets/createbook/08-15.png";
 const InitButtonData = [
   {
     title: "문제집 만들기",
-    summary: "설명쓰세욥",
+    summary: "",
     imagename: create_book_02,
   },
   {
     title: "원하는 시험지와 이름 입력하기",
-    summary: "설명쓰세욥",
+    summary: "",
     imagename: create_book_03,
   },
   {
     title: "템플릿 고르기",
-    summary: "설명쓰세욥",
+    summary: "",
     imagename: create_book_04,
   },
   {
     title: "원하는 템플릿 선택 - #4",
-    summary: "설명쓰세욥",
+    summary: "",
     imagename: create_book_05,
   },
   {
-    title: "문제집 만들기",
-    summary: "설명쓰세욥",
+    title: "새 문제집 만들기",
+    summary: "",
     imagename: create_book_06,
   },
   {
     title: "문제집 배포",
-    summary: "설명쓰세욥",
+    summary: "학생별 반별 문제집 배포시 QR로 채점 입력이 가능합니다.",
     imagename: create_book_07,
   },
   {
     title: "배포할 학생 입력하기",
-    summary: "설명쓰세욥",
+    summary: "",
     imagename: create_book_08,
   },
   {
     title: "선택된 학생에게 문제집 배포",
-    summary: "설명쓰세욥",
+    summary: "",
     imagename: create_book_09,
     alertMessage: "선택된 학생에게 문제집이 배포되었습니다.",
   },
   {
     title: "문제집 보기",
-    summary: "설명쓰세욥",
+    summary: "",
     imagename: create_book_10,
   },
   {
     title: "인쇄 -> 인쇄",
-    summary: "설명쓰세욥",
+    summary: "",
     imagename: create_book_11,
     alertMessage: "인쇄되었습니다.",
   },
   {
     title: "문제집 수정",
-    summary: "설명쓰세욥",
+    summary: "시험지 순서 변경,추가,제거가 가능합니다",
     imagename: create_book_12,
   },
   {
     title: "수정할 데이터 입력",
-    summary: "설명쓰세욥",
+    summary: "",
     imagename: create_book_13,
   },
   {
-    title: "문제집 수정",
-    summary: "설명쓰세욥",
+    title: "문제집 수정하기",
+    summary: "",
     imagename: create_book_14,
   },
   {
     title: "문제집 삭제",
-    summary: "설명쓰세욥",
+    summary: "",
     imagename: create_book_15,
     alertMessage: "문제집이 삭제되었습니다.",
   },
@@ -111,6 +111,20 @@ const CreateBook = () => {
     <br />,
     "시험지별 QR이 생성되어 배부가 가능하므로 학생별 오답 관리 가능",
   ]);
+
+  function 오른쪽버튼색변경(idx, total, button_num) {
+    let 누른거 = InitButtonData[idx].title;
+    누른거 = document.getElementById(누른거);
+    누른거.style.backgroundColor = "gainsboro";
+    for (let i = 0; i < total; i++) {
+      if (i == idx) {
+        continue;
+      }
+      let 누른거 = document.getElementById(InitButtonData[i].title);
+      누른거.style.backgroundColor = "white";
+    }
+  }
+
   return (
     <div className="createbook">
       {/* aside left :: 해당 페이지 정보 이미지로 표기하는 부분 */}
@@ -130,11 +144,13 @@ const CreateBook = () => {
           {InitButtonData.map((item, index) => {
             return (
               <button
+                id={InitButtonData[index].title}
                 className="button"
                 key={"button" + index}
                 onClick={() => {
                   setMainImage(item.imagename);
                   setMainSummary(item.summary);
+                  오른쪽버튼색변경(index, InitButtonData.length, 0);
                   if (item.alertMessage != null) alert(item.alertMessage);
                 }}
               >

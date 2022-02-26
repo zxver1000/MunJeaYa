@@ -27,72 +27,86 @@ import recording_cards_12 from "../assets/recodingcards/04-12.png";
 const InitButtonData = [
   {
     title: "반, 학생 선택하기",
-    summary: "설명쓰세욤",
+    summary: "",
     imagename: recording_cards_02,
   },
   {
     title: "시험지 선택",
-    summary: "설명쓰세욤",
+    summary: "학생 보고서 작성할 시험지 선택하기",
     imagename: recording_cards_03,
   },
   {
     title: "성적표 만들기",
-    summary: "설명쓰세욤",
+    summary: "",
     imagename: recording_cards_04,
   },
   {
     title: "종합 성취도",
-    summary: "설명쓰세욤",
+    summary: "",
     imagename: recording_cards_05,
   },
   {
     title: "요일별 학습 내용",
-    summary: "설명쓰세욤",
+    summary: "",
     imagename: recording_cards_06,
   },
   {
     title: "단원별 학습 내용",
-    summary: "설명쓰세욤",
+    summary: "",
     imagename: recording_cards_07,
   },
   {
     title: "학습한 단원별 정답률",
-    summary: "설명쓰세욤",
+    summary: "",
     imagename: recording_cards_08,
   },
   {
     title: "유형별 학습 내용",
-    summary: "설명쓰세욤",
+    summary: "",
     imagename: recording_cards_09,
   },
   {
     title: "취약한 학습 유형",
-    summary: "설명쓰세욤",
+    summary: "",
     imagename: recording_cards_10,
   },
   {
     title: "학습 평가 SUMMARY",
-    summary: "설명쓰세욤",
+    summary: "",
     imagename: recording_cards_11,
   },
   {
     title: "학습 평가 SUMMARY2",
-    summary: "설명쓰세욤",
+    summary: "",
     imagename: recording_cards_12,
   },
   {
     title: "성적표 저장",
-    summary: "설명쓰세욤",
+    summary: "",
     imagename: recording_cards_12,
     alertMessage: "성적표가 저장되었습니다.",
   },
   {
     title: "성적표 인쇄",
-    summary: "설명쓰세욤",
+    summary: "",
     imagename: recording_cards_12,
     alertMessage: "성적표가 인쇄되었습니다.",
   },
 ];
+
+function 오른쪽버튼색변경(idx, total, button_num) {
+  let 누른거 = InitButtonData[idx].title;
+  누른거 = document.getElementById(누른거);
+  누른거.style.backgroundColor = "gainsboro";
+  for (let i = 0; i < total; i++) {
+    if (i == idx) {
+      continue;
+    }
+    let 누른거 = document.getElementById(InitButtonData[i].title);
+    누른거.style.backgroundColor = "white";
+  }
+}
+
 const RecordingCards = () => {
   const [mainImage, setMainImage] = useState(recording_cards_01);
   const [mainSummary, setMainSummary] = useState("");
@@ -115,11 +129,13 @@ const RecordingCards = () => {
           {InitButtonData.map((item, index) => {
             return (
               <button
+                id={InitButtonData[index].title}
                 className="button"
                 key={"button" + index}
                 onClick={() => {
                   setMainImage(item.imagename);
                   setMainSummary(item.summary);
+                  오른쪽버튼색변경(index, InitButtonData.length, 0);
                   if (item.alertMessage != null) alert(item.alertMessage);
                 }}
               >

@@ -31,3 +31,56 @@
     }
   }
 }
+
+$purple: #512da8;
+$blue: #1976d2;
+$l_orange: #fbc02d;
+$brick: #ff5722;
+
+@mixin buttonBG($bg) {
+  border: 2px solid $bg;
+  color: $bg;
+  &:hover {
+    background-color: $bg;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.skewBtn {
+  width: 180px;
+  height: 80px;
+  outline: none;
+  cursor: pointer;
+  background: none;
+  transition: 0.5s;
+  font-size: 24px;
+  border-radius: 5px;
+  font-family: "Lato", sans-serif;
+  &:hover {
+    border: none;
+    color: white;
+    font-size: 28px;
+    transform: scale(1.1);
+  }
+}
+.buttons {
+  .button {
+    color: black;
+    border-radius: 10px;
+    text-align: center;
+  }
+}
+
+/* Buttons */
+.purple {
+  @include buttonBG($purple);
+}
+.blue {
+  @include buttonBG($blue);
+}
+.lorange {
+  @include buttonBG($l_orange);
+}
+.brick {
+  @include buttonBG($brick);
+}

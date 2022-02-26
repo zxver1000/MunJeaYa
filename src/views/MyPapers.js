@@ -31,89 +31,86 @@ import my_papers_16 from "../assets/mypapers/02-16.png";
 const InitButtonData = [
   {
     title: "새로운 시험지 만들기",
-    summary: "설명쓰세욤",
+    summary: "",
     imagename: my_papers_01,
     alertMessage: "메인페이지에서 [시험지만들기]를 누르면 확인하실 수 있습니다",
   },
-  ,
+
   {
-    title1: "오래된 순서로 정렬",
-    title2: "최근 순서로 정렬",
-    summary: "설명쓰세욤",
-    imagename1: my_papers_02,
-    imagename2: my_papers_01,
-    flag: true,
+    title: "오래된 순서로 정렬",
+    summary: "",
+    imagename: my_papers_02,
   },
   {
     title: "시험지 보기",
-    summary: "설명쓰세욤",
+    summary: "",
     imagename: my_papers_03,
   },
   {
     title: "검색할 반과 시험지 입력",
-    summary: "설명쓰세욤",
+    summary: "",
     imagename: my_papers_04,
   },
   {
     title: "검색하기",
-    summary: "설명쓰세욤",
+    summary: "",
     imagename: my_papers_05,
   },
   {
     title: "시험지 선택",
-    summary: "설명쓰세욤",
+    summary: "",
     imagename: my_papers_06,
   },
   {
     title: "시험지 배포",
-    summary: "설명쓰세욤",
+    summary: "",
     imagename: my_papers_07,
   },
   {
     title: "시험지 배포할 학생 입력",
-    summary: "설명쓰세욤",
+    summary: "",
     imagename: my_papers_08,
   },
   {
     title: "선택된 학생에게 시험지 배포",
-    summary: "설명쓰세욤",
+    summary: "",
     imagename: my_papers_09,
     alertMessage: "해당 학생에게 배포되었습니다.",
   },
   {
     title: "빠른 정답",
-    summary: "설명쓰세욤",
+    summary: "",
     imagename: my_papers_10,
   },
   {
-    title: "정답 + 해설",
-    summary: "설명쓰세욤",
+    title: "정답 해설",
+    summary: "",
     imagename: my_papers_11,
   },
   {
     title: "문제만 출력",
-    summary: "설명쓰세욤",
+    summary: "",
     imagename: my_papers_12,
   },
   {
     title: "전체 출력",
-    summary: "설명쓰세욤",
+    summary: "",
     imagename: my_papers_13,
   },
   {
     title: "인쇄하기",
-    summary: "설명쓰세욤",
+    summary: "",
     imagename: my_papers_14,
     alertMessage: "인쇄되었습니다.",
   },
   {
     title: "삭제할 시험지 선택",
-    summary: "설명쓰세욤",
+    summary: "",
     imagename: my_papers_15,
   },
   {
     title: "시험지 삭제",
-    summary: "설명쓰세욤",
+    summary: "",
     imagename: my_papers_16,
     alertMessage: "시험지가 삭제되었습니다.",
   },
@@ -122,6 +119,25 @@ const InitButtonData = [
 const MyPapers = () => {
   const [mainImage, setMainImage] = useState(my_papers_01);
   const [mainSummary, setMainSummary] = useState("");
+
+  let [지금누름, 지금누른거변경] = useState(0);
+
+  function 오른쪽버튼색변경(idx, total, button_num) {
+    let 누른거 = InitButtonData[idx].title;
+
+    누른거 = document.getElementById(누른거);
+
+    누른거.style.backgroundColor = "gainsboro";
+    for (let i = 0; i < total; i++) {
+      if (i == idx) {
+        continue;
+      }
+
+      let 안누른거 = document.getElementById(InitButtonData[i].title);
+      안누른거.style.backgroundColor = "white";
+    }
+  }
+
   return (
     <div className="mypapers">
       {/* aside left :: 해당 페이지 정보 이미지로 표기하는 부분 */}
@@ -141,28 +157,17 @@ const MyPapers = () => {
           {InitButtonData.map((item, index) => {
             return (
               <button
+                id={InitButtonData[index].title}
                 className="button"
                 key={"button" + index}
                 onClick={() => {
-                  if (item.flag == null) {
-                    setMainImage(item.imagename);
-                    setMainSummary(item.summary);
-                    if (item.alertMessage != null) alert(item.alertMessage);
-                  } else {
-                    item.flag
-                      ? setMainImage(item.imagename1)
-                      : setMainImage(item.imagename2);
-                    item.flag = !item.flag;
-                  }
+                  오른쪽버튼색변경(index, InitButtonData.length, 0);
+                  setMainImage(item.imagename);
+                  setMainSummary(item.summary);
+                  if (item.alertMessage != null) alert(item.alertMessage);
                 }}
               >
-                {item.flag == null ? (
-                  <div className="button-value">{item.title}</div>
-                ) : item.flag ? (
-                  <div className="button-value">{item.title1}</div>
-                ) : (
-                  <div className="button-value">{item.title2}</div>
-                )}
+                {InitButtonData[index].title}
               </button>
             );
           })}

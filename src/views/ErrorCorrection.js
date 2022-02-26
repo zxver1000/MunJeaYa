@@ -23,45 +23,45 @@ import error_correction_07 from "../assets/errorcorrection/10-07.png";
  */
 const InitButtonData = [
   {
-    title: "문제지 선택",
-    summary: "설명 적어주세욤",
+    title: "유형 선택",
+    summary: "",
     imagename: error_correction_02,
   },
   {
     title: "오류 문제 확인",
-    summary: "설명 적어주세욤",
+    summary: "시험지 만들기에서 오류 신고 된 문항이 나옵니다.",
     imagename: error_correction_03,
   },
   {
     title: "유형 문제 확인",
-    summary: "설명 적어주세욤",
+    summary: "",
     imagename: error_correction_04,
   },
   {
     title: "수정할 문제 데이터 입력",
-    summary: "설명 적어주세욤",
+    summary: "",
     imagename: error_correction_05,
   },
   {
     title: "수정 업로드",
-    summary: "설명 적어주세욤",
+    summary: "",
     imagename: error_correction_05,
     alertMessage: "문제가 수정되었습니다.",
   },
   {
     title: "문제 삭제",
-    summary: "설명 적어주세욤",
+    summary: "",
     imagename: error_correction_06,
     alertMessage: "문제가 삭제되었습니다.",
   },
   {
     title: "중복 문제 확인",
-    summary: "설명 적어주세욤",
+    summary: "",
     imagename: error_correction_07,
   },
   {
     title: "중복 문제 확인 완료",
-    summary: "설명 적어주세욤",
+    summary: "",
     imagename: error_correction_07,
     alertMessage: "중복 문제가 삭제되었습니다.",
   },
@@ -70,6 +70,20 @@ const InitButtonData = [
 const ErrorCorrection = () => {
   const [mainImage, setMainImage] = useState(error_correction_01);
   const [mainSummary, setMainSummary] = useState("");
+
+  function 오른쪽버튼색변경(idx, total, button_num) {
+    let 누른거 = InitButtonData[idx].title;
+    누른거 = document.getElementById(누른거);
+    누른거.style.backgroundColor = "gainsboro";
+    for (let i = 0; i < total; i++) {
+      if (i == idx) {
+        continue;
+      }
+      let 누른거 = document.getElementById(InitButtonData[i].title);
+      누른거.style.backgroundColor = "white";
+    }
+  }
+
   return (
     <div className="errorcorrection">
       {/* aside left :: 해당 페이지 정보 이미지로 표기하는 부분 */}
@@ -89,12 +103,14 @@ const ErrorCorrection = () => {
           {InitButtonData.map((item, index) => {
             return (
               <button
+                id={InitButtonData[index].title}
                 className="button"
                 key={"button" + index}
                 onClick={() => {
                   if (item.alertMessage != null) alert(item.alertMessage);
                   setMainImage(item.imagename);
                   setMainSummary(item.summary);
+                  오른쪽버튼색변경(index, InitButtonData.length, 0);
                 }}
               >
                 <div className="button-value">{item.title}</div>

@@ -50,7 +50,7 @@ const InitButtonData = [
     imagename: student_manage_05,
   },
   {
-    title: "학생 정보 수정",
+    title: "학생 정보 수정버튼",
     summary: "학생정보를 수정할수있는 기능입니다",
     imagename: student_manage_06,
   },
@@ -60,7 +60,7 @@ const InitButtonData = [
     imagename: student_manage_07,
   },
   {
-    title: "학생 정보 수정",
+    title: "학생 정보 수정하기",
     summary: "학생 정보 수정",
     imagename: student_manage_08,
   },
@@ -80,7 +80,7 @@ const InitButtonData = [
     imagename: student_manage_11,
   },
   {
-    title: "수강 등록 수정",
+    title: "수강 등록 수정버튼",
     summary: "수강신청한 Class를 변경하는 기능입니다.",
     imagename: student_manage_12,
   },
@@ -90,7 +90,7 @@ const InitButtonData = [
     imagename: student_manage_13,
   },
   {
-    title: "수강 등록 수정",
+    title: "수강 등록 수정하기",
     summary: "수강 등록 수정이 되신것을 알수있습니다.",
     imagename: student_manage_14,
   },
@@ -109,9 +109,21 @@ const InitButtonData = [
 ];
 const CourseManage = () => {
   const [mainImage, setMainImage] = useState(student_manage_01);
-  const [mainSummary, setMainSummary] = useState(
-    "수강생 관리기능은 학생과 수강반을 등록,삭제,수정기능을 담당하고있습니다."
-  );
+  const [mainSummary, setMainSummary] = useState("");
+
+  function 오른쪽버튼색변경(idx, total, button_num) {
+    let 누른거 = InitButtonData[idx].title;
+    누른거 = document.getElementById(누른거);
+    누른거.style.backgroundColor = "gainsboro";
+    for (let i = 0; i < total; i++) {
+      if (i == idx) {
+        continue;
+      }
+      let 누른거 = document.getElementById(InitButtonData[i].title);
+      누른거.style.backgroundColor = "white";
+    }
+  }
+
   return (
     <div className="coursemanage">
       {/* aside left :: 해당 페이지 정보 이미지로 표기하는 부분 */}
@@ -131,11 +143,13 @@ const CourseManage = () => {
           {InitButtonData.map((item, index) => {
             return (
               <button
+                id={InitButtonData[index].title}
                 className="button"
                 key={"button" + index}
                 onClick={() => {
                   setMainImage(item.imagename);
                   setMainSummary(item.summary);
+                  오른쪽버튼색변경(index, InitButtonData.length, 0);
                   if (item.alertMessage != null) alert(item.alertMessage);
                 }}
               >

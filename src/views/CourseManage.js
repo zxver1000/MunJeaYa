@@ -22,44 +22,59 @@ import course_manage_08 from "../assets/coursemanage/05-08.png";
 const InitButtonData = [
   {
     title: "반 만들기",
-    summary: "설명 쓰세욤",
+    summary: "",
     imagename: course_manage_02,
   },
   {
     title: "반 정보입력",
-    summary: "설명 쓰세욤",
+    summary: "",
     imagename: course_manage_03,
   },
   {
     title: "새로운 반 생성",
-    summary: "설명 쓰세욤",
+    summary: "",
     imagename: course_manage_04,
   },
   {
     title: "반 수정하기",
-    summary: "설명 쓰세욤",
+    summary: "",
     imagename: course_manage_05,
   },
   {
     title: "수정 데이터 입력",
-    summary: "설명 쓰세욤",
+    summary: "",
     imagename: course_manage_06,
   },
   {
     title: "반 정보 수정하기",
-    summary: "설명 쓰세욤",
+    summary: "",
     imagename: course_manage_07,
   },
   {
     title: "반 삭제하기",
-    summary: "설명 쓰세욤",
+    summary: "",
     imagename: course_manage_08,
     alertMessage: "반이 삭제되었습니다",
   },
 ];
+
 const CourseManage = () => {
   const [mainImage, setMainImage] = useState(course_manage_01);
   const [mainSummary, setMainSummary] = useState("");
+
+  function 오른쪽버튼색변경(idx, total, button_num) {
+    let 누른거 = InitButtonData[idx].title;
+    누른거 = document.getElementById(누른거);
+    누른거.style.backgroundColor = "gainsboro";
+    for (let i = 0; i < total; i++) {
+      if (i == idx) {
+        continue;
+      }
+      let 누른거 = document.getElementById(InitButtonData[i].title);
+      누른거.style.backgroundColor = "white";
+    }
+  }
+
   return (
     <div className="coursemanage">
       {/* aside left :: 해당 페이지 정보 이미지로 표기하는 부분 */}
@@ -79,11 +94,13 @@ const CourseManage = () => {
           {InitButtonData.map((item, index) => {
             return (
               <button
+                id={InitButtonData[index].title}
                 className="button"
                 key={"button" + index}
                 onClick={() => {
                   setMainImage(item.imagename);
                   setMainSummary(item.summary);
+                  오른쪽버튼색변경(index, InitButtonData.length, 0);
                   if (item.alertMessage != null) alert(item.alertMessage);
                 }}
               >

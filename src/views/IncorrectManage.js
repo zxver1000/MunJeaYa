@@ -43,12 +43,12 @@ import view_all from "../assets/incorrectmanage/3-25.png";
  */
 const InitButtonDataFirst = [
   {
-    title: "초기화",
+    title: "처음화면 변경",
     summary: "",
     imagename: basic_main,
   },
   {
-    title: "학생, 반 입력하기",
+    title: "학생, 반 선택하기",
     summary: "",
     imagename: test_insert,
   },
@@ -192,7 +192,6 @@ const InitButton = [
   InitButtonDataFourth,
   InitButtonDataFifth,
 ];
-
 const buttonData = [
   {
     id: 0,
@@ -220,6 +219,7 @@ const buttonData = [
     value: "(5) 시험지 보기 추가기능",
   },
 ];
+
 const IncorrectManage = () => {
   const [buttonType, setButtonType] = useState(0);
   const [mainImage, setMainImage] = useState(basic_main);
@@ -230,6 +230,37 @@ const IncorrectManage = () => {
     <br />,
     "자동으로 틀린 문제 시험지는 저장 되지 않고, 온라인 학생이 입력 시 자동 저장 되어 확인하실수있습니다.",
   ]);
+
+  function 오른쪽버튼색변경(idx, total, button_num) {
+    let 누른거 = InitButton[button_num][idx].title;
+    console.log(InitButton[button_num][idx].title);
+    누른거 = document.getElementById(누른거);
+    누른거.style.backgroundColor = "gainsboro";
+    for (let i = 0; i < total; i++) {
+      if (i == idx) {
+        continue;
+      }
+      let 누른거 = document.getElementById(InitButton[button_num][i].title);
+      누른거.style.backgroundColor = "white";
+    }
+  }
+
+  function 왼쪽버튼색변경(idx, total) {
+    let 누른거 = buttonData[idx].id;
+    누른거 = document.getElementById(누른거);
+
+    누른거.style.backgroundColor = "gainsboro";
+    for (let i = 0; i < total; i++) {
+      if (i == idx) {
+        continue;
+      }
+      let 안누른거 = buttonData[i].id;
+
+      안누른거 = document.getElementById(안누른거);
+      안누른거.style.backgroundColor = "white";
+    }
+  }
+
   return (
     <div className="incorrectmanage">
       {/* aside left :: 해당 페이지 정보 이미지로 표기하는 부분 */}
@@ -240,10 +271,13 @@ const IncorrectManage = () => {
           {buttonData.map((item, index) => {
             return (
               <button
+                id={buttonData[index].id}
                 className="button"
                 key={"button" + index}
                 onClick={() => {
                   setButtonType(item.id);
+
+                  왼쪽버튼색변경(index, buttonData.length);
                   setMainImage(item.image);
                 }}
               >
@@ -266,10 +300,17 @@ const IncorrectManage = () => {
           {InitButton[buttonType].map((item, index) => {
             return (
               <button
+                id={InitButton[buttonType][index].title}
                 className="button"
                 key={"button" + index}
+                style={{ backgroundColor: "white" }}
                 onClick={() => {
                   setMainImage(item.imagename);
+                  오른쪽버튼색변경(
+                    index,
+                    InitButton[buttonType].length,
+                    buttonType
+                  );
                   setMainSummary(item.summary);
                   if (item.message != null) alert(item.message);
                 }}

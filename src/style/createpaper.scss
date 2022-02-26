@@ -15,6 +15,16 @@
     &.right {
     }
   }
+
+  .buttons {
+    .button {
+      font-family: "Nanum Gothic", sans-serif;
+
+      color: black;
+      border-radius: 10px;
+      text-align: center;
+    }
+  }
   .createpaper-main {
     display: flex;
     flex-direction: column;

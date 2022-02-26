@@ -15,14 +15,21 @@
     &.right {
     }
   }
+  .buttons {
+    .button {
+      color: black;
+      border-radius: 10px;
+      text-align: center;
+    }
+  }
   .paperregistration-main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 60%;
+    width: 65%;
     .image {
-      width: 75%;
+      width: 100%;
     }
     .summary {
       margin: 1.25em 0em;

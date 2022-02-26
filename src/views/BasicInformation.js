@@ -7,6 +7,7 @@ import go_main from "../assets/goMain.png";
 import insert_info from "../assets/basicinformation/12_basicinformation_before.png";
 import modify_info from "../assets/basicinformation/12_basicinformation_after.png";
 import reset_info from "../assets/basicinformation/12_basicinformation_before.png";
+
 /*
   하단 title, summary, imagename 작성하여 개수만 늘려주면 됨
   title     : 버튼이름
@@ -30,11 +31,27 @@ const InitButtonData = [
     imagename: reset_info,
   },
 ];
+
 const BasicInformation = () => {
   const [mainImage, setMainImage] = useState(reset_info);
+
   const [mainSummary, setMainSummary] = useState(
     "로고 파일은 사전 전달되면 최적화 후 입력"
   );
+  let [지금누름, 지금누른거변경] = useState(0);
+  function 버튼색변경(idx, total) {
+    let 누른거 = document.getElementById(idx);
+    누른거.style.backgroundColor = "gainsboro";
+    console.log(total);
+    for (let i = 0; i < total; i++) {
+      if (i == idx) {
+        continue;
+      }
+      let 누른거 = document.getElementById(i);
+      누른거.style.backgroundColor = "white";
+    }
+  }
+
   return (
     <div className="basicinformation">
       {/* aside left :: 해당 페이지 정보 이미지로 표기하는 부분 */}
@@ -57,11 +74,15 @@ const BasicInformation = () => {
           {InitButtonData.map((item, index) => {
             return (
               <button
+                id={index}
                 className="button"
                 key={"button" + index}
                 onClick={() => {
                   setMainImage(item.imagename);
+                  console.log(item);
                   setMainSummary(item.summary);
+                  지금누른거변경(index);
+                  버튼색변경(index, InitButtonData.length);
                 }}
               >
                 <div className="button-value">{item.title}</div>

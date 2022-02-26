@@ -11,6 +11,7 @@ import tree_manage_04 from "../assets/treemanage/07-04.PNG";
 import tree_manage_05 from "../assets/treemanage/07-05.PNG";
 import tree_manage_06 from "../assets/treemanage/07-06.PNG";
 import tree_manage_07 from "../assets/treemanage/07-07.png";
+import tree_manage_08 from "../assets/treemanage/07-08.png";
 /*
   하단 title, summary, imagename 작성하여 개수만 늘려주면 됨
   title     : 버튼이름
@@ -46,7 +47,7 @@ const InitButtonData = [
   {
     title: "DB업로드",
     summary: "DB업로드하기",
-    imagename: tree_manage_06,
+    imagename: tree_manage_08,
     alertmessage: "DB가 업로드되었습니다",
   },
   {
@@ -62,6 +63,18 @@ const TreeManage = () => {
   const [mainSummary, setMainSummary] = useState(
     "트리는 기본 토킹매쓰로 전학년 수학 대 / 중단원으로 기본 설정하여 배부."
   );
+  function 오른쪽버튼색변경(idx, total, button_num) {
+    let 누른거 = InitButtonData[idx].title;
+    누른거 = document.getElementById(누른거);
+    누른거.style.backgroundColor = "gainsboro";
+    for (let i = 0; i < total; i++) {
+      if (i == idx) {
+        continue;
+      }
+      let 누른거 = document.getElementById(InitButtonData[i].title);
+      누른거.style.backgroundColor = "white";
+    }
+  }
 
   return (
     <div className="treemanage">
@@ -82,11 +95,13 @@ const TreeManage = () => {
           {InitButtonData.map((item, index) => {
             return (
               <button
+                id={InitButtonData[index].title}
                 className="button"
                 key={"button" + index}
                 onClick={() => {
                   setMainImage(item.imagename);
                   setMainSummary(item.summary);
+                  오른쪽버튼색변경(index, InitButtonData.length, 0);
                   if (item.alertmessage != null) alert(item.alertmessage);
                 }}
               >
