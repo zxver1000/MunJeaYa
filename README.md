@@ -2,7 +2,7 @@
 # 문제야 프로그램 홈페이지
 
 
-- 기술Stack - Javascript,Css,Scss,React
+- 기술Stack - Javascript,CSS,SCSS,React
 - FrameWork - Bootstrap
 
 - 홈페이지보기 - [zxver1000.github.io/react-filip](zxver1000.github.io/react-filip)
