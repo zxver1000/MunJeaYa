@@ -234,7 +234,7 @@ const CreatePaper = () => {
                       setMainSummary(item.summary);
                       if (item.message != null) alert(item.message);
                       오른쪽버튼색변경(index, InitButtonDataFirst.length, 0);
-                      console.log(InitButtonDataFirst.length);
+                      
                     }}
                   >
                     <div className="button-value">{item.title}</div>

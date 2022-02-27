@@ -2,10 +2,10 @@ import "../style/confirmrepetition.scss";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import main_icon12_hover from "../assets/main_icons/main_icon12_hover.png";
+import main_icon12_hover from "../assets/main_icons/main_icon11_hover.png";
 import go_main from "../assets/goMain.png";
-import insert_info from "../assets/basicinformation/12_basicinformation_before.png";
-import modify_info from "../assets/basicinformation/12_basicinformation_after.png";
+import insert_info from "../assets/confirmrepettion/11-04.png";
+import modify_info from "../assets/confirmrepettion/11-03.png";
 import reset_info from "../assets/basicinformation/12_basicinformation_before.png";
 /*
   하단 title, summary, imagename 작성하여 개수만 늘려주면 됨
@@ -15,24 +15,33 @@ import reset_info from "../assets/basicinformation/12_basicinformation_before.pn
  */
 const InitButtonData = [
   {
-    title: "회원(학원) 정보 입력",
-    summary: "회원(학원)정보의 회원 정보를 입력할 수 있습니다.",
+    title: "처음 화면",
+    summary: "",
     imagename: insert_info,
   },
   {
-    title: "회원(학원) 정보 수정",
-    summary: "회원(학원)정보의 회원 정보를 수정할 수 있습니다.",
+    title: "중복 문제 확인",
+    summary: "",
     imagename: modify_info,
-  },
-  {
-    title: "초기화",
-    summary: "회원(학원)정보의 회원 정보를 초기화 수 있습니다.",
-    imagename: reset_info,
   },
 ];
 const ConfirmRepetition = () => {
-  const [mainImage, setMainImage] = useState(reset_info);
+  const [mainImage, setMainImage] = useState(insert_info);
   const [mainSummary, setMainSummary] = useState("");
+
+  function 오른쪽버튼색변경(idx, total) {
+    let 누른거 = InitButtonData[idx].title;
+    누른거 = document.getElementById(누른거);
+    누른거.style.backgroundColor = "gainsboro";
+    for (let i = 0; i < total; i++) {
+      if (i == idx) {
+        continue;
+      }
+      let 누른거 = document.getElementById(InitButtonData[i].title);
+      누른거.style.backgroundColor = "white";
+    }
+  }
+
   return (
     <div className="confirmrepetition">
       {/* aside left :: 해당 페이지 정보 이미지로 표기하는 부분 */}
@@ -52,11 +61,13 @@ const ConfirmRepetition = () => {
           {InitButtonData.map((item, index) => {
             return (
               <button
+                id={InitButtonData[index].title}
                 className="button"
                 key={"button" + index}
                 onClick={() => {
                   setMainImage(item.imagename);
                   setMainSummary(item.summary);
+                  오른쪽버튼색변경(index, InitButtonData.length);
                 }}
               >
                 <div className="button-value">{item.title}</div>

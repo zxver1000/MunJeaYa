@@ -245,10 +245,9 @@ const IncorrectManage = () => {
     }
   }
 
-  function 왼쪽버튼색변경(idx, total) {
+  function 왼쪽버튼색변경(idx, total, button_num) {
     let 누른거 = buttonData[idx].id;
     누른거 = document.getElementById(누른거);
-
     누른거.style.backgroundColor = "gainsboro";
     for (let i = 0; i < total; i++) {
       if (i == idx) {
@@ -259,6 +258,15 @@ const IncorrectManage = () => {
       안누른거 = document.getElementById(안누른거);
       안누른거.style.backgroundColor = "white";
     }
+
+    /*
+    for (let z = 0; z < InitButton[button_num].length; z++) {
+      let 안누른거 = InitButton[button_num][z].title;
+      console.log(InitButton[button_num][z].title);
+      안누른거 = document.getElementById(안누른거);
+      안누른거.style.backgroundColor = "white";
+    }
+    */
   }
 
   return (
@@ -275,9 +283,14 @@ const IncorrectManage = () => {
                 className="button"
                 key={"button" + index}
                 onClick={() => {
+                  왼쪽버튼색변경(
+                    index,
+                    buttonData.length,
+                    buttonData[index].id
+                  );
+
                   setButtonType(item.id);
 
-                  왼쪽버튼색변경(index, buttonData.length);
                   setMainImage(item.image);
                 }}
               >
