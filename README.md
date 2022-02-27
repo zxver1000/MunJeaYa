@@ -6,4 +6,4 @@
 - FrameWork - Bootstrap
 
 - 홈페이지보기 - [zxver1000.github.io/react-filip](zxver1000.github.io/react-filip)
-- Repasitory - [https://github.com/zxver1000/react-flip](https://github.com/zxver1000/react-flip)
+- Repsitory - [https://github.com/zxver1000/react-flip](https://github.com/zxver1000/react-flip)
