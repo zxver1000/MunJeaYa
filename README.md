@@ -5,5 +5,5 @@
 - 기술Stack - Javascript,css,scsss,react
 - FrameWork - Bootstrap
 
-- [관련홈페이지](zxver1000.github.io/react-filip)
-- [Repasitory ](https://github.com/zxver1000/react-flip)
+- 홈페이지보기 - [zxver1000.github.io/react-filip](zxver1000.github.io/react-filip)
+- Repasitory - [https://github.com/zxver1000/react-flip](https://github.com/zxver1000/react-flip)
