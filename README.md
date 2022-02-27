@@ -1,5 +1,5 @@
 
-# 문제야 프로그램 외주 홈페이지
+# 문제야 프로그램 홈페이지
 
 
 - 기술Stack - Javascript,Css,Scss,React
