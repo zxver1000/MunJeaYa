@@ -8,7 +8,7 @@
 - 홈페이지보기 - [zxver1000.github.io/react-filip](zxver1000.github.io/react-filip)
 - Repository - [https://github.com/zxver1000/react-flip](https://github.com/zxver1000/react-flip)
 
-- Developer - 고현호,해진,
+- Developer - 고현호, 해진, 지수
 
 # 
 문제야 프로그램이 작동되는 것처럼 웹으로 구현하였습니다.
