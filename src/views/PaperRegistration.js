@@ -26,60 +26,60 @@ import make_3 from "../assets/paperregistration/09-12.png";
 const InitButtonDataFirst = [
   {
     title: "(1) 자료 만들기",
-    summary: "설명 쓰는 곳",
+    summary: "",
     imagename: make_1,
   },
   {
     title: "(2) 자료 만들기",
-    summary: "설명 쓰는 곳",
+    summary: "",
     imagename: make_2,
   },
   {
     title: "(3) 자료 만들기",
-    summary: "설명 쓰는 곳",
+    summary: "",
     imagename: make_3,
   },
 ];
 const InitButtonDataSecond = [
   {
     title: "문제 등록 기본 화면",
-    summary: "설명 쓰는 곳",
+    summary: "",
     imagename: basic,
   },
   {
     title: "카테고리 선택",
-    summary: "설명 쓰는 곳",
+    summary: "",
     imagename: category_insert,
   },
   {
     title: "... (원본 시험지 추가)",
-    summary: "설명 쓰는 곳",
+    summary: "",
     imagename: etc,
   },
   {
     title: "문제지 선택",
-    summary: "설명 쓰는 곳",
+    summary: "",
     imagename: problem_select,
   },
   {
     title: "문제지 등록하기",
-    summary: "설명 쓰는 곳",
+    summary: "",
     imagename: problem_insert,
   },
   {
     title: "문제 개수 확인",
-    summary: "설명 쓰는 곳",
+    summary: "",
     imagename: problem_check,
   },
   {
     title: "문제지 추출 및 업로드",
-    summary: "설명 쓰는 곳",
+    summary: "",
     imagename: problem_upload,
     message: "문제가 등록되었습니다.",
   },
   {
     title: "시험지 삭제",
-    summary: "설명 쓰는 곳",
+    summary: "",
     imagename: problem_delete,
     message: "삭제되었습니다.",
   },
