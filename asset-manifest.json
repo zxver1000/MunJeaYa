@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-flip/static/css/main.153ed16d.css",
-    "main.js": "/react-flip/static/js/main.6a27432c.js",
+    "main.css": "/react-flip/static/css/main.988b31b0.css",
+    "main.js": "/react-flip/static/js/main.78baf67e.js",
     "static/js/787.a13aa905.chunk.js": "/react-flip/static/js/787.a13aa905.chunk.js",
     "static/media/NanumGothic-Bold.ttf": "/react-flip/static/media/NanumGothic-Bold.6499af72b1d61fe8269d.ttf",
     "static/media/09-10.png": "/react-flip/static/media/09-10.a52d234e60d8c63f8752.png",
@@ -149,12 +149,12 @@
     "static/media/main_icon10_hover.png": "/react-flip/static/media/main_icon10_hover.09c32bdba77e15cf28b0.png",
     "static/media/goMain.png": "/react-flip/static/media/goMain.2986568c03f01bec9eed.png",
     "index.html": "/react-flip/index.html",
-    "main.153ed16d.css.map": "/react-flip/static/css/main.153ed16d.css.map",
-    "main.6a27432c.js.map": "/react-flip/static/js/main.6a27432c.js.map",
+    "main.988b31b0.css.map": "/react-flip/static/css/main.988b31b0.css.map",
+    "main.78baf67e.js.map": "/react-flip/static/js/main.78baf67e.js.map",
     "787.a13aa905.chunk.js.map": "/react-flip/static/js/787.a13aa905.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.153ed16d.css",
-    "static/js/main.6a27432c.js"
+    "static/css/main.988b31b0.css",
+    "static/js/main.78baf67e.js"
   ]
 }
