@@ -315,7 +315,7 @@ const IncorrectManage = () => {
               <button
                 id={InitButton[buttonType][index].title}
                 className="button"
-                key={"button" + index}
+                key={"button" + "-" + buttonType + "-" + index}
                 style={{ backgroundColor: "white" }}
                 onClick={() => {
                   setMainImage(item.imagename);
