@@ -94,7 +94,7 @@ const PaperRegistration = () => {
     let 누른거 = InitButtonDataSecond[idx].title;
     누른거 = document.getElementById(누른거);
     왼쪽버튼눌림변경(false);
-    누른거.style.backgroundColor = "gainsboro";
+    누른거.style.backgroundColor = "rgb(159, 169, 216)";
     for (let i = 0; i < total; i++) {
       if (i == idx) {
         continue;
@@ -108,7 +108,7 @@ const PaperRegistration = () => {
     let 누른거 = InitButtonDataFirst[idx].title;
     누른거 = document.getElementById(누른거);
     왼쪽버튼눌림변경(true);
-    누른거.style.backgroundColor = "gainsboro";
+    누른거.style.backgroundColor = "rgb(159, 169, 216)";
     for (let i = 0; i < total; i++) {
       if (i == idx) {
         continue;

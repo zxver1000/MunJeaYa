@@ -97,7 +97,7 @@ const InitButtonData = [
 function 오른쪽버튼색변경(idx, total, button_num) {
   let 누른거 = InitButtonData[idx].title;
   누른거 = document.getElementById(누른거);
-  누른거.style.backgroundColor = "gainsboro";
+  누른거.style.backgroundColor = "rgb(159, 169, 216)";
   for (let i = 0; i < total; i++) {
     if (i == idx) {
       continue;

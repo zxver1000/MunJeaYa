@@ -41,7 +41,7 @@ const BasicInformation = () => {
   let [지금누름, 지금누른거변경] = useState(0);
   function 버튼색변경(idx, total) {
     let 누른거 = document.getElementById(idx);
-    누른거.style.backgroundColor = "gainsboro";
+    누른거.style.backgroundColor = "rgb(159, 169, 216)";
     console.log(total);
     for (let i = 0; i < total; i++) {
       if (i == idx) {

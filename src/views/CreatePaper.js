@@ -130,7 +130,7 @@ const CreatePaper = () => {
     if (button_num == 0) {
       let 누른거 = InitButtonDataFirst[idx].title;
       누른거 = document.getElementById(누른거);
-      누른거.style.backgroundColor = "gainsboro";
+      누른거.style.backgroundColor = "rgb(159, 169, 216)";
       for (let i = 0; i < total; i++) {
         if (i == idx) {
           continue;
@@ -141,7 +141,7 @@ const CreatePaper = () => {
     } else {
       let 누른거 = InitButtonDataSecond[idx].title;
       누른거 = document.getElementById(누른거);
-      누른거.style.backgroundColor = "gainsboro";
+      누른거.style.backgroundColor = "rgb(159, 169, 216)";
       for (let i = 0; i < total; i++) {
         if (i == idx) {
           continue;
@@ -154,7 +154,7 @@ const CreatePaper = () => {
   function 왼쪽버튼색변경(idx, total) {
     let 누른거 = "left_button" + idx;
     누른거 = document.getElementById(누른거);
-    누른거.style.backgroundColor = "gainsboro";
+    누른거.style.backgroundColor = "rgb(159, 169, 216)";
     for (let i = 1; i <= total; i++) {
       if (i == idx) {
         continue;
@@ -175,7 +175,7 @@ const CreatePaper = () => {
           <button
             id="left_button1"
             className="button"
-            style={{ backgroundColor: "gainsboro" }}
+            style={{ backgroundColor: "rgb(159, 169, 216)" }}
             onClick={() => {
               setButtonType(false);
               setMainImage(main_image);
@@ -234,7 +234,6 @@ const CreatePaper = () => {
                       setMainSummary(item.summary);
                       if (item.message != null) alert(item.message);
                       오른쪽버튼색변경(index, InitButtonDataFirst.length, 0);
-                      
                     }}
                   >
                     <div className="button-value">{item.title}</div>

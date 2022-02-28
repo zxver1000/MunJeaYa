@@ -235,7 +235,7 @@ const IncorrectManage = () => {
     let 누른거 = InitButton[button_num][idx].title;
     console.log(InitButton[button_num][idx].title);
     누른거 = document.getElementById(누른거);
-    누른거.style.backgroundColor = "gainsboro";
+    누른거.style.backgroundColor = "rgb(159, 169, 216)";
     for (let i = 0; i < total; i++) {
       if (i == idx) {
         continue;
@@ -248,7 +248,7 @@ const IncorrectManage = () => {
   function 왼쪽버튼색변경(idx, total, button_num) {
     let 누른거 = buttonData[idx].id;
     누른거 = document.getElementById(누른거);
-    누른거.style.backgroundColor = "gainsboro";
+    누른거.style.backgroundColor = "rgb(159, 169, 216)";
     for (let i = 0; i < total; i++) {
       if (i == idx) {
         continue;

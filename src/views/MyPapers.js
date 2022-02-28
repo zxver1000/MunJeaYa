@@ -127,7 +127,7 @@ const MyPapers = () => {
 
     누른거 = document.getElementById(누른거);
 
-    누른거.style.backgroundColor = "gainsboro";
+    누른거.style.backgroundColor = "rgb(159, 169, 216)";
     for (let i = 0; i < total; i++) {
       if (i == idx) {
         continue;
@@ -167,7 +167,9 @@ const MyPapers = () => {
                   if (item.alertMessage != null) alert(item.alertMessage);
                 }}
               >
-                {InitButtonData[index].title}
+                <div className="button-value">
+                  {InitButtonData[index].title}
+                </div>
               </button>
             );
           })}
