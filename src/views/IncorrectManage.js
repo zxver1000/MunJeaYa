@@ -109,7 +109,7 @@ const InitButtonDataThird = [
     imagename: test_wrong_similar_insert,
   },
   {
-    title: "오답유사 시험지 만들기",
+    title: "시험지 만들기",
     summary: "",
     imagename: test_wrong_similar_done,
     message: "오답유사 시험지가 완성되었습니다.",
@@ -200,22 +200,22 @@ const buttonData = [
   },
   {
     id: 1,
-    image: basic_main,
+    image: test_wrong,
     value: "(2) 틀린문제 시험지 만들기",
   },
   {
     id: 2,
-    image: basic_main,
+    image: test_wrong_similar_select,
     value: "(3) 오답유사 시험지 만들기",
   },
   {
     id: 3,
-    image: basic_main,
+    image: test_except_select,
     value: "(4) 출제문제 제외 시험지 만들기",
   },
   {
     id: 4,
-    image: basic_main,
+    image: order_recent,
     value: "(5) 시험지 보기 추가기능",
   },
 ];
@@ -258,17 +258,148 @@ const IncorrectManage = () => {
       안누른거 = document.getElementById(안누른거);
       안누른거.style.backgroundColor = "white";
     }
-
-    /*
-    for (let z = 0; z < InitButton[button_num].length; z++) {
-      let 안누른거 = InitButton[button_num][z].title;
-      console.log(InitButton[button_num][z].title);
-      안누른거 = document.getElementById(안누른거);
-      안누른거.style.backgroundColor = "white";
-    }
-    */
   }
 
+  function 처음셋팅(buttonType) {
+    var array = [];
+
+    for (let i = 0; i < InitButton[buttonType].length; i++) {
+      if (i == 0) {
+        array.push(
+          <button
+            id={InitButton[buttonType][i].title}
+            className="button"
+            key={"button" + "-" + buttonType + "-" + i}
+            style={{ backgroundColor: "rgb(159, 169, 216)" }}
+            onClick={() => {
+              setMainImage(InitButton[buttonType][i].imagename);
+              오른쪽버튼색변경(i, InitButton[buttonType].length, buttonType);
+              setMainSummary(InitButton[buttonType][i].summary);
+              if (InitButton[buttonType][i].message != null)
+                alert(InitButton[buttonType][i].message);
+            }}
+          >
+            <div className="button-value">
+              {InitButton[buttonType][i].title}
+            </div>
+          </button>
+        );
+      } else {
+        array.push(
+          <button
+            id={InitButton[buttonType][i].title}
+            className="button"
+            key={"button" + "-" + buttonType + "-" + i}
+            onClick={() => {
+              setMainImage(InitButton[buttonType][i].imagename);
+              오른쪽버튼색변경(i, InitButton[buttonType].length, buttonType);
+              setMainSummary(InitButton[buttonType][i].summary);
+              if (InitButton[buttonType][i].message != null)
+                alert(InitButton[buttonType][i].message);
+            }}
+          >
+            <div className="button-value">
+              {InitButton[buttonType][i].title}
+            </div>
+          </button>
+        );
+      }
+    }
+
+    return array;
+  }
+
+  function 연습(buttonType) {
+    var array = [];
+    for (let i = 0; i < InitButton[buttonType].length; i++) {
+      if (i == 0) {
+        array.push(
+          <button
+            id={InitButton[buttonType][i].title}
+            className="button"
+            style={{ backgroundColor: "rgb(159, 169, 216)" }}
+            key={"button" + "-" + buttonType + "-" + i}
+            onClick={() => {
+              setMainImage(InitButton[buttonType][i].imagename);
+              오른쪽버튼색변경(i, InitButton[buttonType].length, buttonType);
+              setMainSummary(InitButton[buttonType][i].summary);
+              if (InitButton[buttonType][i].message != null)
+                alert(InitButton[buttonType][i].message);
+            }}
+          >
+            <div className="button-value">
+              {InitButton[buttonType][i].title}
+            </div>
+          </button>
+        );
+      } else {
+        array.push(
+          <button
+            id={InitButton[buttonType][i].title}
+            className="button"
+            key={"button" + "-" + buttonType + "-" + i}
+            style={{ backgroundColor: "white" }}
+            onClick={() => {
+              setMainImage(InitButton[buttonType][i].imagename);
+              오른쪽버튼색변경(i, InitButton[buttonType].length, buttonType);
+              setMainSummary(InitButton[buttonType][i].summary);
+              if (InitButton[buttonType][i].message != null)
+                alert(InitButton[buttonType][i].message);
+            }}
+          >
+            <div className="button-value">
+              {InitButton[buttonType][i].title}
+            </div>
+          </button>
+        );
+      }
+    }
+    return array;
+  }
+
+  function 왼쪽꺼() {
+    var array = [];
+
+    for (let i = 0; i < buttonData.length; i++) {
+      if (i == 0) {
+        array.push(
+          <button
+            id={buttonData[i].id}
+            className="button"
+            style={{ backgroundColor: "rgb(159, 169, 216)" }}
+            key={"button" + i}
+            onClick={() => {
+              왼쪽버튼색변경(i, buttonData.length, buttonData[i].id);
+
+              setButtonType(buttonData[i].id);
+
+              setMainImage(buttonData[i].image);
+            }}
+          >
+            <div className="button-value">{buttonData[i].value}</div>
+          </button>
+        );
+      } else {
+        array.push(
+          <button
+            id={buttonData[i].id}
+            className="button"
+            key={"button" + i}
+            onClick={() => {
+              왼쪽버튼색변경(i, buttonData.length, buttonData[i].id);
+
+              setButtonType(buttonData[i].id);
+
+              setMainImage(buttonData[i].image);
+            }}
+          >
+            <div className="button-value">{buttonData[i].value}</div>
+          </button>
+        );
+      }
+    }
+    return array;
+  }
   return (
     <div className="incorrectmanage">
       {/* aside left :: 해당 페이지 정보 이미지로 표기하는 부분 */}
@@ -276,28 +407,7 @@ const IncorrectManage = () => {
         <img className="incorrectmanage-image left" src={main_icon12_hover} />
         <section className="buttons">
           아래 버튼을 클릭하여 시험지 만드는 방법을 알 수 있습니다.
-          {buttonData.map((item, index) => {
-            return (
-              <button
-                id={buttonData[index].id}
-                className="button"
-                key={"button" + index}
-                onClick={() => {
-                  왼쪽버튼색변경(
-                    index,
-                    buttonData.length,
-                    buttonData[index].id
-                  );
-
-                  setButtonType(item.id);
-
-                  setMainImage(item.image);
-                }}
-              >
-                <div className="button-value">{item.value}</div>
-              </button>
-            );
-          })}
+          {왼쪽꺼()}
         </section>
       </aside>
       {/* pagename-main :: 해당 페이지의 주 내용 부분이 담기는 부분 */}
@@ -310,28 +420,7 @@ const IncorrectManage = () => {
         <div className="right">기능 리스트</div>
         <section className="buttons">
           아래 버튼을 클릭하면 가운데 실행화면을 볼 수 있습니다.
-          {InitButton[buttonType].map((item, index) => {
-            return (
-              <button
-                id={InitButton[buttonType][index].title}
-                className="button"
-                key={"button" + "-" + buttonType + "-" + index}
-                style={{ backgroundColor: "white" }}
-                onClick={() => {
-                  setMainImage(item.imagename);
-                  오른쪽버튼색변경(
-                    index,
-                    InitButton[buttonType].length,
-                    buttonType
-                  );
-                  setMainSummary(item.summary);
-                  if (item.message != null) alert(item.message);
-                }}
-              >
-                <div className="button-value">{item.title}</div>
-              </button>
-            );
-          })}
+          {연습(buttonType)}
         </section>
       </aside>
     </div>

@@ -41,7 +41,43 @@ const ConfirmRepetition = () => {
       누른거.style.backgroundColor = "white";
     }
   }
+  function 처음셋팅() {
+    var array = [];
+    for (let i = 0; i < InitButtonData.length; i++) {
+      if (i == 0) {
+        array.push(
+          <button
+            id={InitButtonData[i].title}
+            style={{ backgroundColor: "rgb(159, 169, 216)" }}
+            className="button"
+            onClick={() => {
+              setMainImage(InitButtonData[i].imagename);
+              setMainSummary(InitButtonData[i].summary);
+              오른쪽버튼색변경(i, InitButtonData.length);
+            }}
+          >
+            <div className="button-value">{InitButtonData[i].title}</div>
+          </button>
+        );
+      } else {
+        array.push(
+          <button
+            id={InitButtonData[i].title}
+            className="button"
+            onClick={() => {
+              setMainImage(InitButtonData[i].imagename);
+              setMainSummary(InitButtonData[i].summary);
+              오른쪽버튼색변경(i, InitButtonData.length);
+            }}
+          >
+            <div className="button-value">{InitButtonData[i].title}</div>
+          </button>
+        );
+      }
+    }
 
+    return array;
+  }
   return (
     <div className="confirmrepetition">
       {/* aside left :: 해당 페이지 정보 이미지로 표기하는 부분 */}
@@ -58,22 +94,7 @@ const ConfirmRepetition = () => {
         <div className="right">기능 리스트</div>
         <section className="buttons">
           아래 버튼을 클릭하면 가운데 실행화면을 볼 수 있습니다.
-          {InitButtonData.map((item, index) => {
-            return (
-              <button
-                id={InitButtonData[index].title}
-                className="button"
-                key={"button" + index}
-                onClick={() => {
-                  setMainImage(item.imagename);
-                  setMainSummary(item.summary);
-                  오른쪽버튼색변경(index, InitButtonData.length);
-                }}
-              >
-                <div className="button-value">{item.title}</div>
-              </button>
-            );
-          })}
+          {처음셋팅()}
         </section>
       </aside>
     </div>

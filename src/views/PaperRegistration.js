@@ -93,7 +93,7 @@ const PaperRegistration = () => {
   function 오른쪽버튼색변경(idx, total, button_num) {
     let 누른거 = InitButtonDataSecond[idx].title;
     누른거 = document.getElementById(누른거);
-    왼쪽버튼눌림변경(false);
+
     누른거.style.backgroundColor = "rgb(159, 169, 216)";
     for (let i = 0; i < total; i++) {
       if (i == idx) {
@@ -107,7 +107,6 @@ const PaperRegistration = () => {
   function 왼쪽버튼색변경(idx, total) {
     let 누른거 = InitButtonDataFirst[idx].title;
     누른거 = document.getElementById(누른거);
-    왼쪽버튼눌림변경(true);
     누른거.style.backgroundColor = "rgb(159, 169, 216)";
     for (let i = 0; i < total; i++) {
       if (i == idx) {
@@ -129,6 +128,51 @@ const PaperRegistration = () => {
       누른거.style.backgroundColor = "white";
     }
   }
+
+  function 처음셋팅() {
+    var array = [];
+    for (let i = 0; i < InitButtonDataSecond.length; i++) {
+      if (i == 0) {
+        array.push(
+          <button
+            id={InitButtonDataSecond[i].title}
+            className="button"
+            style={{ backgroundColor: "rgb(159, 169, 216)" }}
+            onClick={() => {
+              setMainImage(InitButtonDataSecond[i].imagename);
+              setMainSummary(InitButtonDataSecond[i].summary);
+              오른쪽버튼색변경(i, InitButtonDataSecond.length, 0);
+              왼쪽버튼색끄기(InitButtonDataFirst.length);
+              if (InitButtonDataSecond[i].message != null)
+                alert(InitButtonDataSecond[i].message);
+            }}
+          >
+            <div className="button-value">{InitButtonDataSecond[i].title}</div>
+          </button>
+        );
+      } else {
+        array.push(
+          <button
+            id={InitButtonDataSecond[i].title}
+            className="button"
+            onClick={() => {
+              setMainImage(InitButtonDataSecond[i].imagename);
+              setMainSummary(InitButtonDataSecond[i].summary);
+              오른쪽버튼색변경(i, InitButtonDataSecond.length, 0);
+              왼쪽버튼색끄기(InitButtonDataFirst.length);
+              if (InitButtonDataSecond[i].message != null)
+                alert(InitButtonDataSecond[i].message);
+            }}
+          >
+            <div className="button-value">{InitButtonDataSecond[i].title}</div>
+          </button>
+        );
+      }
+    }
+
+    return array;
+  }
+
   return (
     <div className="paperregistration">
       {/* aside left :: 해당 페이지 정보 이미지로 표기하는 부분 */}
@@ -141,12 +185,13 @@ const PaperRegistration = () => {
               <button
                 id={InitButtonDataFirst[index].title}
                 className="button"
-                key={"button" + index}
                 onClick={() => {
                   setMainImage(item.imagename);
                   setMainSummary(item.summary);
-                  왼쪽버튼색변경(index, InitButtonDataFirst.length);
+
+                  왼쪽버튼색변경(index, InitButtonDataFirst.length, 0);
                   오른쪽버튼색끄기(InitButtonDataSecond.length);
+
                   if (item.message != null) alert(item.message);
                 }}
               >
@@ -166,26 +211,7 @@ const PaperRegistration = () => {
         <div className="right">기능 리스트</div>
         <section className="buttons">
           아래 버튼을 클릭하면 가운데 실행화면을 볼 수 있습니다.
-          {InitButtonDataSecond.map((item, index) => {
-            return (
-              <button
-                id={InitButtonDataSecond[index].title}
-                className="button"
-                key={"button" + index}
-                onClick={() => {
-                  setMainImage(item.imagename);
-                  setMainSummary(item.summary);
-
-                  오른쪽버튼색변경(index, InitButtonDataSecond.length, 0);
-                  왼쪽버튼색끄기(InitButtonDataFirst.length);
-
-                  if (item.message != null) alert(item.message);
-                }}
-              >
-                <div className="button-value">{item.title}</div>
-              </button>
-            );
-          })}
+          {처음셋팅()}
         </section>
       </aside>
     </div>
