@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Munjeaya/static/css/main.ea79190e.css",
+    "main.css": "/Munjeaya/static/css/main.846b2090.css",
     "main.js": "/Munjeaya/static/js/main.1d8d8276.js",
     "static/js/787.a13aa905.chunk.js": "/Munjeaya/static/js/787.a13aa905.chunk.js",
     "static/media/NanumGothic-Bold.ttf": "/Munjeaya/static/media/NanumGothic-Bold.6499af72b1d61fe8269d.ttf",
@@ -149,12 +149,12 @@
     "static/media/main_icon10_hover.png": "/Munjeaya/static/media/main_icon10_hover.09c32bdba77e15cf28b0.png",
     "static/media/goMain.png": "/Munjeaya/static/media/goMain.2986568c03f01bec9eed.png",
     "index.html": "/Munjeaya/index.html",
-    "main.ea79190e.css.map": "/Munjeaya/static/css/main.ea79190e.css.map",
+    "main.846b2090.css.map": "/Munjeaya/static/css/main.846b2090.css.map",
     "main.1d8d8276.js.map": "/Munjeaya/static/js/main.1d8d8276.js.map",
     "787.a13aa905.chunk.js.map": "/Munjeaya/static/js/787.a13aa905.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ea79190e.css",
+    "static/css/main.846b2090.css",
     "static/js/main.1d8d8276.js"
   ]
 }
