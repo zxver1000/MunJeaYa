@@ -5,7 +5,7 @@
 - 기술Stack - Javascript,CSS,SCSS,React
 - FrameWork - Bootstrap
 
-- 홈페이지보기 - [zxver1000.github.io/MunJeaYa](zxver1000.github.io/MunJeaYa)
+- 홈페이지보기 - [zxver1000.github.io/MunJeaYa](https://zxver1000.github.io/MunJeaYa)
 - Repository - [https://github.com/zxver1000/MunJeaYa](https://github.com/zxver1000/MunJeaYa)
 
 - Developer - 고현호, 해진, 지수
