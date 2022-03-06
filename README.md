@@ -5,8 +5,8 @@
 - 기술Stack - Javascript,CSS,SCSS,React
 - FrameWork - Bootstrap
 
-- 홈페이지보기 - [zxver1000.github.io/react-filip](zxver1000.github.io/react-filip)
-- Repository - [https://github.com/zxver1000/react-flip](https://github.com/zxver1000/react-flip)
+- 홈페이지보기 - [zxver1000.github.io/MunJeaYa](zxver1000.github.io/MunJeaYa)
+- Repository - [https://github.com/zxver1000/MunJeaYa](https://github.com/zxver1000/MunJeaYa)
 
 - Developer - 고현호, 해진, 지수
 
