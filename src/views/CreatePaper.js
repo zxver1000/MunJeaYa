@@ -38,7 +38,7 @@ const InitButtonDataFirst = [
   {
     title: "시험지 만들기 설정",
     summary: "",
-    imagename: data_set_complate,
+    imagename: main_image,
     message: "시험지 설정이 완료되었습니다.",
   },
   {
