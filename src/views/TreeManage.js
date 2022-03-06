@@ -21,38 +21,38 @@ import tree_manage_08 from "../assets/treemanage/07-08.png";
 const InitButtonData = [
   {
     title: "카테고리 선택하기",
-    summary: "원하시는 카테고리를 고르실수 있습니다.",
+    summary: "",
     imagename: tree_manage_02,
   },
   {
     title: "카테고리 이름 입력",
-    summary: "카테고리에 원하시는 이름을 작명하실수 있습니다.",
+    summary: "",
     imagename: tree_manage_03,
   },
   {
     title: "등록하기",
-    summary: "트리에 원하시는 카테고리를 추가하실 수 있습니다",
+    summary: "",
     imagename: tree_manage_04,
   },
   {
     title: "수정할 데이터 입력",
-    summary: "카테고리를 수정하실수 있습니다.",
+    summary: "",
     imagename: tree_manage_05,
   },
   {
     title: "수정하기",
-    summary: "카테고리를 수정하실수 있습니다.",
+    summary: "",
     imagename: tree_manage_06,
   },
   {
     title: "DB업로드",
-    summary: "DB업로드하기",
+    summary: "",
     imagename: tree_manage_08,
     alertmessage: "DB가 업로드되었습니다",
   },
   {
     title: "카테고리삭제하기",
-    summary: "카테고리삭제",
+    summary: "",
     imagename: tree_manage_07,
     alertmessage: "카테고리가 삭제되었습니다.",
   },

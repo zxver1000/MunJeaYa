@@ -18,7 +18,7 @@ import new_main_image from "../assets/createpaper/01-10.png";
 import quest_2 from "../assets/createpaper/01-11.png";
 import quest_4 from "../assets/createpaper/01-12.png";
 import quest_6 from "../assets/createpaper/01-13.png";
-import naegi_button from "../assets/createpaper/01-14.png";
+import naegi_button from "../assets/createpaper/01-21.png";
 import quest_easy from "../assets/createpaper/01-15.png";
 import last_image from "../assets/createpaper/01-20.png";
 
@@ -92,7 +92,11 @@ const InitButtonDataSecond = [
   },
   {
     title: "내지 선택",
-    summary: "시험지 배경 템플릿을 변경하실수 있습니다.",
+    summary: [
+      "마음에드는 시험지 배경을 선택하실수있습니다.",
+      <br />,
+      "10가지 내지는 기본으로 제공됩니다",
+    ],
     imagename: naegi_button,
   },
   {

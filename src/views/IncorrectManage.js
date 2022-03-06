@@ -12,7 +12,7 @@ import test_mark from "../assets/incorrectmanage/3-04.png";
 import test_mark_insert from "../assets/incorrectmanage/3-05.png";
 import test_mark_complate from "../assets/incorrectmanage/3-06.png";
 
-import test_wrong from "../assets/incorrectmanage/3-07.png";
+import test_wrong from "../assets/incorrectmanage/3-26.png";
 import test_wrong_insert from "../assets/incorrectmanage/3-08.png";
 import test_wrong_make from "../assets/incorrectmanage/3-09.png";
 import test_wrong_similar_select from "../assets/incorrectmanage/3-10.png";
@@ -197,26 +197,37 @@ const buttonData = [
     id: 0,
     image: basic_main,
     value: "(1) 시험지 채점 하기",
+    text: [
+      "채점하기 : 학생에게 배부된 시험지 채점을 수동으로 수정 및 입력 가능",
+      <br />,
+      "학생 개별 생성 관리되며, 시험지 묶어서 출력 및 배부는 나의 시험지에서 일괄 선택",
+      <br />,
+      "자동으로 틀린 문제 시험지는 저장 되지 않고, 온라인 학생이 입력 시 자동 저장 되어 확인하실수있습니다.",
+    ],
   },
   {
     id: 1,
     image: test_wrong,
     value: "(2) 틀린문제 시험지 만들기",
+    text: "",
   },
   {
     id: 2,
     image: test_wrong_similar_select,
     value: "(3) 오답유사 시험지 만들기",
+    text: "",
   },
   {
     id: 3,
     image: test_except_select,
     value: "(4) 출제문제 제외 시험지 만들기",
+    text: "",
   },
   {
     id: 4,
     image: order_recent,
     value: "(5) 시험지 보기 추가기능",
+    text: "",
   },
 ];
 
@@ -370,7 +381,7 @@ const IncorrectManage = () => {
             key={"button" + i}
             onClick={() => {
               왼쪽버튼색변경(i, buttonData.length, buttonData[i].id);
-
+              setMainSummary(buttonData[i].text);
               setButtonType(buttonData[i].id);
 
               setMainImage(buttonData[i].image);
@@ -387,7 +398,7 @@ const IncorrectManage = () => {
             key={"button" + i}
             onClick={() => {
               왼쪽버튼색변경(i, buttonData.length, buttonData[i].id);
-
+              setMainSummary(buttonData[i].text);
               setButtonType(buttonData[i].id);
 
               setMainImage(buttonData[i].image);
