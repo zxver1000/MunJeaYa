@@ -177,7 +177,11 @@ const PaperRegistration = () => {
     <div className="paperregistration">
       {/* aside left :: 해당 페이지 정보 이미지로 표기하는 부분 */}
       <aside className="left">
-        <img className="paperregistration-image left" src={main_icon9_hover} />
+        <img
+          className="paperregistration-image left"
+          style={{ borderRadius: "15px" }}
+          src={main_icon9_hover}
+        />
         <section className="buttons">
           아래 버튼을 클릭하여 문제를 만드는데 도움을 받을 수 있습니다.
           {InitButtonDataFirst.map((item, index) => {
@@ -208,7 +212,9 @@ const PaperRegistration = () => {
       </div>
       {/* aside right :: 해당 페이지의 Flow를 설명하는 부분 + 메인으로 돌아가는 버튼 존재 */}
       <aside className="right">
-        <div className="right">기능 리스트</div>
+        <div className="right" style={{ borderRadius: "15px" }}>
+          기능 리스트
+        </div>
         <section className="buttons">
           아래 버튼을 클릭하면 가운데 실행화면을 볼 수 있습니다.
           {처음셋팅()}

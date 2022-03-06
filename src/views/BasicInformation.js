@@ -94,7 +94,11 @@ const BasicInformation = () => {
     <div className="basicinformation">
       {/* aside left :: 해당 페이지 정보 이미지로 표기하는 부분 */}
       <aside className="left">
-        <img className="basicinformation-image left" src={main_icon12_hover} />
+        <img
+          className="basicinformation-image left"
+          src={main_icon12_hover}
+          style={{ borderRadius: "15px" }}
+        />
       </aside>
       {/* pagename-main :: 해당 페이지의 주 내용 부분이 담기는 부분 */}
       <div className="basicinformation-main description">
@@ -106,7 +110,9 @@ const BasicInformation = () => {
         {/* <Link to="/main">
           <img className="basicinformation-image right" src={go_main} />
         </Link> */}
-        <div className="right">기능 리스트</div>
+        <div className="right " style={{ borderRadius: "15px" }}>
+          기능 리스트
+        </div>
         <section className="buttons">
           아래 버튼을 클릭하면 가운데 실행화면을 볼 수 있습니다.
           {처음셋팅()}

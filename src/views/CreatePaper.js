@@ -36,17 +36,17 @@ const InitButtonDataFirst = [
   },
 
   {
-    title: "카테고리 선택",
-    summary: "원하시는 카테고리를 선택하실수 있습니다.",
-    imagename: category_select,
-  },
-
-  {
     title: "시험지 만들기 설정",
     summary: "",
     imagename: data_set_complate,
     message: "시험지 설정이 완료되었습니다.",
   },
+  {
+    title: "카테고리 선택",
+    summary: "원하시는 카테고리를 선택하실수 있습니다.",
+    imagename: category_select,
+  },
+
   {
     title: "시험지명 입력",
     summary: "시험지 이름을 자유롭게 설정하실수있습니다.",
@@ -169,7 +169,11 @@ const CreatePaper = () => {
     <div className="createpaper">
       {/* aside left :: 해당 페이지 정보 이미지로 표기하는 부분 */}
       <aside className="left">
-        <img className="createpaper-image left" src={main_icon12_hover} />
+        <img
+          className="createpaper-image left"
+          style={{ borderRadius: "15px" }}
+          src={main_icon12_hover}
+        />
         <section className="buttons">
           아래 버튼을 클릭하여 시험지 만드는 방법을 알 수 있습니다.
           <button
@@ -219,7 +223,9 @@ const CreatePaper = () => {
       </div>
       {/* aside right :: 해당 페이지의 Flow를 설명하는 부분 + 메인으로 돌아가는 버튼 존재 */}
       <aside className="right">
-        <div className="right">기능 리스트</div>
+        <div className="right" style={{ borderRadius: "15px" }}>
+          기능 리스트
+        </div>
         <section className="buttons">
           아래 버튼을 클릭하면 가운데 실행화면을 볼 수 있습니다.
           {buttonType == false
