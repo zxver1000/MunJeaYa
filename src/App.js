@@ -33,6 +33,8 @@ import ConfirmRepetition from "./views/ConfirmRepettion";
 import BasicInformation from "./views/BasicInformation";
 import mainlog from "./assets/main_logo.png";
 import Login_new from "./views/login";
+import Premium_product from "./views/premium";
+import Nomal_product from "./views/nomal";
 function 상단바() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
@@ -52,9 +54,23 @@ function 상단바() {
               id="collasible-nav-dropdown"
               style={{ fontWeight: "bold" }}
             >
-              <NavDropdown.Item>보급형</NavDropdown.Item>
+              <NavDropdown.Item>
+                <Link to="/product1">
+                  <div className="" style={{ width: "100%" }}>
+                    보급형
+                  </div>
+                </Link>
+              </NavDropdown.Item>
+
               <NavDropdown.Divider />
-              <NavDropdown.Item>고급형</NavDropdown.Item>
+
+              <NavDropdown.Item>
+                <Link to="/product2">
+                  <div className="" style={{ width: "100%" }}>
+                    고급형
+                  </div>
+                </Link>
+              </NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Nav>
@@ -84,7 +100,13 @@ function App() {
           <Route exact path="/">
             <Logins />
           </Route>
+          <Route exact path="/product1">
+            <Premium_product />
+          </Route>
 
+          <Route exact path="/product2">
+            <Nomal_product />
+          </Route>
           <Route exact path="/test">
             <Login_new />
           </Route>
