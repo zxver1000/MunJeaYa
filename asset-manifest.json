@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/MunJeaYa/static/css/main.66f0909b.css",
-    "main.js": "/MunJeaYa/static/js/main.0edddec2.js",
+    "main.js": "/MunJeaYa/static/js/main.d06e4646.js",
     "static/js/787.a13aa905.chunk.js": "/MunJeaYa/static/js/787.a13aa905.chunk.js",
     "static/media/NanumGothic-Bold.ttf": "/MunJeaYa/static/media/NanumGothic-Bold.6499af72b1d61fe8269d.ttf",
     "static/media/09-10.png": "/MunJeaYa/static/media/09-10.a52d234e60d8c63f8752.png",
@@ -150,11 +150,11 @@
     "static/media/goMain.png": "/MunJeaYa/static/media/goMain.2986568c03f01bec9eed.png",
     "index.html": "/MunJeaYa/index.html",
     "main.66f0909b.css.map": "/MunJeaYa/static/css/main.66f0909b.css.map",
-    "main.0edddec2.js.map": "/MunJeaYa/static/js/main.0edddec2.js.map",
+    "main.d06e4646.js.map": "/MunJeaYa/static/js/main.d06e4646.js.map",
     "787.a13aa905.chunk.js.map": "/MunJeaYa/static/js/787.a13aa905.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.66f0909b.css",
-    "static/js/main.0edddec2.js"
+    "static/js/main.d06e4646.js"
   ]
 }
